@@ -1,0 +1,882 @@
+/* ===== NUXT WELCOME COMPONENT STYLES ===== */
+
+/* Base styles and UnoCSS reset */
+.nuxt-welcome *,
+.nuxt-welcome :after,
+.nuxt-welcome :before {
+  border-color: var(--un-default-border-color, #e5e7eb);
+  border-style: solid;
+  border-width: 0;
+  box-sizing: border-box;
+}
+
+.nuxt-welcome :after,
+.nuxt-welcome :before {
+  --un-content: "";
+}
+
+.nuxt-welcome html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nuxt-welcome body {
+  line-height: inherit;
+  margin: 0;
+}
+
+.nuxt-welcome h1,
+.nuxt-welcome h2 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.nuxt-welcome a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.nuxt-welcome h1,
+.nuxt-welcome h2,
+.nuxt-welcome p,
+.nuxt-welcome ul {
+  margin: 0;
+}
+
+.nuxt-welcome ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nuxt-welcome svg {
+  display: block;
+  vertical-align: middle;
+}
+
+/* UnoCSS Variables */
+.nuxt-welcome *,
+.nuxt-welcome :after,
+.nuxt-welcome :before {
+  --un-rotate: 0;
+  --un-rotate-x: 0;
+  --un-rotate-y: 0;
+  --un-rotate-z: 0;
+  --un-scale-x: 1;
+  --un-scale-y: 1;
+  --un-scale-z: 1;
+  --un-skew-x: 0;
+  --un-skew-y: 0;
+  --un-translate-x: 0;
+  --un-translate-y: 0;
+  --un-translate-z: 0;
+  --un-pan-x: ;
+  --un-pan-y: ;
+  --un-pinch-zoom: ;
+  --un-scroll-snap-strictness: proximity;
+  --un-ordinal: ;
+  --un-slashed-zero: ;
+  --un-numeric-figure: ;
+  --un-numeric-spacing: ;
+  --un-numeric-fraction: ;
+  --un-border-spacing-x: 0;
+  --un-border-spacing-y: 0;
+  --un-ring-offset-shadow: 0 0 transparent;
+  --un-ring-shadow: 0 0 transparent;
+  --un-shadow-inset: ;
+  --un-shadow: 0 0 transparent;
+  --un-ring-inset: ;
+  --un-ring-offset-width: 0px;
+  --un-ring-offset-color: #fff;
+  --un-ring-width: 0px;
+  --un-ring-color: rgba(147, 197, 253, .5);
+  --un-blur: ;
+  --un-brightness: ;
+  --un-contrast: ;
+  --un-drop-shadow: ;
+  --un-grayscale: ;
+  --un-hue-rotate: ;
+  --un-invert: ;
+  --un-saturate: ;
+  --un-sepia: ;
+  --un-backdrop-blur: ;
+  --un-backdrop-brightness: ;
+  --un-backdrop-contrast: ;
+  --un-backdrop-grayscale: ;
+  --un-backdrop-hue-rotate: ;
+  --un-backdrop-invert: ;
+  --un-backdrop-opacity: ;
+  --un-backdrop-saturate: ;
+  --un-backdrop-sepia: ;
+}
+
+/* Welcome container */
+.nuxt-welcome-container {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+  color: #020420;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  place-content: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .nuxt-welcome-container {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .nuxt-welcome-container {
+    background-color: #020420;
+    color: white;
+  }
+}
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  width: 1px;
+  clip: rect(0, 0, 0, 0);
+  border-width: 0;
+  white-space: nowrap;
+}
+
+/* Layout utilities */
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.right-4 {
+  right: 1rem;
+}
+
+.top-4 {
+  top: 1rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.size-18px {
+  height: 18px;
+  width: 18px;
+}
+
+.size-4 {
+  height: 1rem;
+  width: 1rem;
+}
+
+.size-5 {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.h-32px {
+  height: 32px;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
+.max-w-980px {
+  max-width: 980px;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.w-32px {
+  width: 32px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.place-content-center {
+  place-content: center;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-y-4 {
+  row-gap: 1rem;
+}
+
+/* Borders */
+.border {
+  border-width: 1px;
+}
+
+.border-dc42-50 {
+  border-color: #00dc4280;
+}
+
+.border-dc82 {
+  --un-border-opacity: 1;
+  border-color: rgb(0 220 130 / var(--un-border-opacity));
+}
+
+.border-gray-200 {
+  --un-border-opacity: 1;
+  border-color: rgb(224 224 224 / var(--un-border-opacity));
+}
+
+.border-green-600-10 {
+  border-color: #00bb6a1a;
+}
+
+.border-green-600-20 {
+  border-color: #00bb6a33;
+}
+
+.hover-border-dc82:hover {
+  --un-border-opacity: 1;
+  border-color: rgb(0 220 130 / var(--un-border-opacity));
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+/* Backgrounds */
+.bg-dc42-10 {
+  background-color: #00dc421a;
+}
+
+.bg-dc82-5 {
+  background-color: #00dc820d;
+}
+
+.bg-gray-50-10 {
+  background-color: #f5f5f51a;
+}
+
+.bg-green-50 {
+  --un-bg-opacity: 1;
+  background-color: rgb(208 252 222 / var(--un-bg-opacity));
+}
+
+.bg-white {
+  --un-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--un-bg-opacity));
+}
+
+/* Padding */
+.p-1 {
+  padding: 0.25rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-1 {
+  padding-bottom: 0.25rem;
+  padding-top: 0.25rem;
+}
+
+/* Typography */
+.text-12px {
+  font-size: 12px;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-dc82 {
+  --un-text-opacity: 1;
+  color: rgb(0 220 130 / var(--un-text-opacity));
+}
+
+.text-020420 {
+  --un-text-opacity: 1;
+  color: rgb(2 4 32 / var(--un-text-opacity));
+}
+
+.text-020420-20 {
+  color: #02042033;
+}
+
+.text-gray-500 {
+  --un-text-opacity: 1;
+  color: rgb(117 117 117 / var(--un-text-opacity));
+}
+
+.text-gray-700 {
+  --un-text-opacity: 1;
+  color: rgb(66 66 66 / var(--un-text-opacity));
+}
+
+.text-green-700 {
+  --un-text-opacity: 1;
+  color: rgb(0 153 86 / var(--un-text-opacity));
+}
+
+.hover-text-020420:hover {
+  --un-text-opacity: 1;
+  color: rgb(2 4 32 / var(--un-text-opacity));
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.leading-none {
+  line-height: 1;
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+}
+
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus and interaction */
+.focus-visible-ring-2:focus-visible {
+  --un-ring-width: 2px;
+  --un-ring-offset-shadow: var(--un-ring-inset) 0 0 0 var(--un-ring-offset-width) var(--un-ring-offset-color);
+  --un-ring-shadow: var(--un-ring-inset) 0 0 0 calc(var(--un-ring-width) + var(--un-ring-offset-width)) var(--un-ring-color);
+  box-shadow: var(--un-ring-offset-shadow), var(--un-ring-shadow), var(--un-shadow);
+}
+
+.transition-all {
+  transition-duration: 0.15s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Group hover effects */
+.group:hover .group-hover-size-5 {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.group:hover .group-hover-text-dc82 {
+  --un-text-opacity: 1;
+  color: rgb(0 220 130 / var(--un-text-opacity));
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .dark-border-dc82-50 {
+    border-color: #00dc8280;
+  }
+  
+  .dark-border-dc82-80,
+  .group:hover .group-hover-dark-border-dc82-80 {
+    border-color: #00dc82cc;
+  }
+  
+  .dark-border-white-10 {
+    border-color: #ffffff1a;
+  }
+  
+  .dark-border-white-20 {
+    border-color: #fff3;
+  }
+  
+  .hover-dark-border-dc82:hover {
+    --un-border-opacity: 1;
+    border-color: rgb(0 220 130 / var(--un-border-opacity));
+  }
+  
+  .dark-bg-020420 {
+    --un-bg-opacity: 1;
+    background-color: rgb(2 4 32 / var(--un-bg-opacity));
+  }
+  
+  .dark-bg-white-5 {
+    background-color: #ffffff0d;
+  }
+  
+  .dark-text-dc82 {
+    --un-text-opacity: 1;
+    color: rgb(0 220 130 / var(--un-text-opacity));
+  }
+  
+  .dark-text-gray-200 {
+    --un-text-opacity: 1;
+    color: rgb(224 224 224 / var(--un-text-opacity));
+  }
+  
+  .dark-text-gray-400 {
+    --un-text-opacity: 1;
+    color: rgb(158 158 158 / var(--un-text-opacity));
+  }
+  
+  .dark-text-white {
+    --un-text-opacity: 1;
+    color: rgb(255 255 255 / var(--un-text-opacity));
+  }
+  
+  .dark-text-white-40 {
+    color: #fff6;
+  }
+  
+  .dark-hover-text-white:hover {
+    --un-text-opacity: 1;
+    color: rgb(255 255 255 / var(--un-text-opacity));
+  }
+  
+  .group:hover .group-hover-dark-text-gray-100 {
+    --un-text-opacity: 1;
+    color: rgb(238 238 238 / var(--un-text-opacity));
+  }
+}
+
+/* Responsive breakpoints */
+@media (min-width: 640px) {
+  .sm-col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+  
+  .sm-grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  
+  .sm-mb-0 {
+    margin-bottom: 0;
+  }
+  
+  .sm-mt-0 {
+    margin-top: 0;
+  }
+  
+  .sm-mt-10 {
+    margin-top: 2.5rem;
+  }
+  
+  .sm-mt-6 {
+    margin-top: 1.5rem;
+  }
+  
+  .sm-h-12 {
+    height: 3rem;
+  }
+  
+  .sm-gap-6 {
+    gap: 1.5rem;
+  }
+  
+  .sm-px-2-5 {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
+  
+  .sm-px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  .sm-py-1-5 {
+    padding-bottom: 0.375rem;
+    padding-top: 0.375rem;
+  }
+  
+  .sm-text-14px {
+    font-size: 14px;
+  }
+  
+  .sm-text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg-px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* ===== NUXT WELCOME SPECIFIC COMPONENT STYLES ===== */
+
+/* Main welcome wrapper */
+.nuxt-welcome {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Welcome card styling */
+.nuxt-welcome .welcome-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  max-width: 980px;
+  width: 100%;
+}
+
+/* Nuxt logo and title section */
+.nuxt-welcome .logo-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.nuxt-welcome .nuxt-logo {
+  height: 2rem;
+}
+
+@media (min-width: 640px) {
+  .nuxt-welcome .nuxt-logo {
+    height: 3rem;
+  }
+}
+
+.nuxt-welcome .version-badge {
+  background-color: rgba(0, 220, 66, 0.1);
+  border: 1px solid rgba(0, 220, 66, 0.5);
+  color: #00dc82;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-weight: 600;
+  display: inline-block;
+  line-height: 1;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 12px;
+}
+
+@media (min-width: 640px) {
+  .nuxt-welcome .version-badge {
+    padding: 0.625rem 1rem;
+    font-size: 14px;
+  }
+}
+
+/* Card grid layout */
+.nuxt-welcome .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .nuxt-welcome .cards-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+}
+
+/* Individual cards */
+.nuxt-welcome .feature-card {
+  background: rgba(229, 229, 229, 0.1);
+  border: 1px solid rgba(229, 229, 229, 0.2);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.nuxt-welcome .feature-card:hover {
+  border-color: #00dc82;
+}
+
+.nuxt-welcome .feature-card.primary-card {
+  grid-column: span 2;
+}
+
+@media (max-width: 639px) {
+  .nuxt-welcome .feature-card.primary-card {
+    grid-column: span 1;
+  }
+}
+
+/* Card icons */
+.nuxt-welcome .card-icon {
+  background-color: rgba(0, 220, 130, 0.05);
+  border: 1px solid #00dc82;
+  color: #00dc82;
+  display: flex;
+  height: 32px;
+  width: 32px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nuxt-welcome .feature-card:hover .card-icon {
+  border-color: rgba(0, 220, 130, 0.8);
+}
+
+/* Card content */
+.nuxt-welcome .card-title {
+  font-weight: 600;
+  margin-top: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.nuxt-welcome .card-description {
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+/* External link icon */
+.nuxt-welcome .external-icon {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  height: 1rem;
+  width: 1rem;
+  color: rgba(2, 4, 32, 0.2);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nuxt-welcome .feature-card:hover .external-icon {
+  height: 1.25rem;
+  width: 1.25rem;
+  color: #00dc82;
+}
+
+/* Footer */
+.nuxt-welcome .footer {
+  margin: 1.5rem auto 1.5rem auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .nuxt-welcome .footer {
+    margin: 2.5rem auto 0 auto;
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nuxt-welcome .footer {
+    padding: 0 2rem;
+  }
+}
+
+.nuxt-welcome .social-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.nuxt-welcome .social-link {
+  color: #6b7280;
+  transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nuxt-welcome .social-link:hover {
+  color: #020420;
+}
+
+.nuxt-welcome .social-link:focus-visible {
+  outline: 2px solid;
+  outline-offset: 2px;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .nuxt-welcome .welcome-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .nuxt-welcome .feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .nuxt-welcome .feature-card:hover {
+    border-color: #00dc82;
+  }
+  
+  .nuxt-welcome .card-icon {
+    background-color: #020420;
+    border-color: rgba(0, 220, 130, 0.5);
+    color: #00dc82;
+  }
+  
+  .nuxt-welcome .feature-card:hover .card-icon {
+    border-color: rgba(0, 220, 130, 0.8);
+  }
+  
+  .nuxt-welcome .card-description {
+    color: #e5e7eb;
+  }
+  
+  .nuxt-welcome .feature-card:hover .card-description {
+    color: #f3f4f6;
+  }
+  
+  .nuxt-welcome .external-icon {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  
+  .nuxt-welcome .social-link {
+    color: #9ca3af;
+  }
+  
+  .nuxt-welcome .social-link:hover {
+    color: white;
+  }
+  
+  .nuxt-welcome .version-badge {
+    background-color: #020420;
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #00dc82;
+  }
+  
+  .nuxt-welcome .version-badge:hover {
+    background-color: rgba(0, 220, 66, 0.15);
+    border-color: #00dc82;
+  }
+}
+
+/* Code highlighting for inline code */
+.nuxt-welcome .inline-code {
+  background-color: #dcfce7;
+  border: 1px solid rgba(0, 187, 106, 0.1);
+  color: #15803d;
+  font-weight: 700;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.nuxt-welcome .inline-code.file-name {
+  border-color: rgba(0, 187, 106, 0.2);
+  transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nuxt-welcome .inline-code.file-name:hover {
+  border-color: #00dc82;
+}
+
+@media (prefers-color-scheme: dark) {
+  .nuxt-welcome .inline-code {
+    background-color: #020420;
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #00dc82;
+  }
+  
+  .nuxt-welcome .inline-code.file-name {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+}
