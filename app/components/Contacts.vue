@@ -7,7 +7,6 @@
           Ready to start your construction project? We're here to help bring your vision to life.
         </p>
       </div>
-      
       <div class="contacts-content">
         <div class="contact-info">
           <div class="info-card">
@@ -20,7 +19,6 @@
             <p>+1 (555) 123-4567</p>
             <span class="info-detail">Mon-Fri 8:00 AM - 6:00 PM</span>
           </div>
-          
           <div class="info-card">
             <div class="info-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
