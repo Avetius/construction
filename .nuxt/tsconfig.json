@@ -88,15 +88,6 @@
       "vue-demi": [
         "../node_modules/nuxt/dist/app/compat/vue-demi"
       ],
-      "#mdc-configs": [
-        "./mdc-configs"
-      ],
-      "#mdc-highlighter": [
-        "./mdc-highlighter"
-      ],
-      "#mdc-imports": [
-        "./mdc-imports"
-      ],
       "#nuxt-scripts-validator": [
         "../node_modules/@nuxt/scripts/dist/runtime/validation/valibot"
       ],
@@ -105,6 +96,15 @@
       ],
       "#nuxt-scripts/*": [
         "../node_modules/@nuxt/scripts/dist/runtime/*"
+      ],
+      "#mdc-configs": [
+        "./mdc-configs"
+      ],
+      "#mdc-highlighter": [
+        "./mdc-highlighter"
+      ],
+      "#mdc-imports": [
+        "./mdc-imports"
       ],
       "#ui": [
         "../node_modules/@nuxt/ui/dist/runtime"
@@ -125,7 +125,7 @@
         "./imports"
       ],
       "#app-manifest": [
-        "./manifest/meta/33c88138-adb6-4e7a-934e-e849539f7434"
+        "./manifest/meta/8c611f24-3ff8-4e11-898f-c1d1e7f95ead"
       ],
       "#components": [
         "./components"
@@ -193,12 +193,12 @@
     "../node_modules",
     "../../node_modules",
     "../node_modules/nuxt/node_modules",
-    "../node_modules/@nuxtjs/mdc/node_modules",
-    "../node_modules/@nuxt/content/node_modules",
     "../node_modules/@nuxt/eslint/node_modules",
     "../node_modules/@nuxt/image/node_modules",
     "../node_modules/@nuxt/scripts/node_modules",
     "../node_modules/@nuxt/test-utils/node_modules",
+    "../node_modules/@nuxtjs/mdc/node_modules",
+    "../node_modules/@nuxt/content/node_modules",
     "../node_modules/@nuxt/icon/node_modules",
     "../node_modules/@nuxt/fonts/node_modules",
     "../node_modules/@nuxtjs/color-mode/node_modules",

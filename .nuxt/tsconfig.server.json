@@ -92,15 +92,6 @@
       "#internal/nuxt/paths": [
         "../node_modules/@nuxt/nitro-server/dist/runtime/utils/paths"
       ],
-      "#mdc-configs": [
-        "./mdc-configs"
-      ],
-      "#mdc-highlighter": [
-        "./mdc-highlighter"
-      ],
-      "#mdc-imports": [
-        "./mdc-imports"
-      ],
       "#nuxt-scripts-validator": [
         "../node_modules/@nuxt/scripts/dist/runtime/validation/valibot"
       ],
@@ -109,6 +100,15 @@
       ],
       "#nuxt-scripts/*": [
         "../node_modules/@nuxt/scripts/dist/runtime/*"
+      ],
+      "#mdc-configs": [
+        "./mdc-configs"
+      ],
+      "#mdc-highlighter": [
+        "./mdc-highlighter"
+      ],
+      "#mdc-imports": [
+        "./mdc-imports"
       ],
       "#ui": [
         "../node_modules/@nuxt/ui/dist/runtime"
@@ -154,12 +154,12 @@
     "../node_modules",
     "../../node_modules",
     "../node_modules/nuxt/node_modules",
-    "../node_modules/@nuxtjs/mdc/node_modules",
-    "../node_modules/@nuxt/content/node_modules",
     "../node_modules/@nuxt/eslint/node_modules",
     "../node_modules/@nuxt/image/node_modules",
     "../node_modules/@nuxt/scripts/node_modules",
     "../node_modules/@nuxt/test-utils/node_modules",
+    "../node_modules/@nuxtjs/mdc/node_modules",
+    "../node_modules/@nuxt/content/node_modules",
     "../node_modules/@nuxt/icon/node_modules",
     "../node_modules/@nuxt/fonts/node_modules",
     "../node_modules/@nuxtjs/color-mode/node_modules",

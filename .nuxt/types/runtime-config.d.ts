@@ -43,6 +43,14 @@ import { RuntimeConfig as UserRuntimeConfig, PublicRuntimeConfig as UserPublicRu
    },
   }
   interface SharedPublicRuntimeConfig {
+   "nuxt-scripts": {
+      version: any,
+
+      defaultScriptOptions: {
+         trigger: string,
+      },
+   },
+
    mdc: {
       components: {
          prose: boolean,
@@ -64,14 +72,6 @@ import { RuntimeConfig as UserRuntimeConfig, PublicRuntimeConfig as UserPublicRu
 
             h6: boolean,
          },
-      },
-   },
-
-   "nuxt-scripts": {
-      version: any,
-
-      defaultScriptOptions: {
-         trigger: string,
       },
    },
 

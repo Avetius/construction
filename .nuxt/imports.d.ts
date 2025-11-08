@@ -42,10 +42,6 @@ export { portalTargetInjectionKey, usePortal } from '../node_modules/@nuxt/ui/di
 export { useResizable } from '../node_modules/@nuxt/ui/dist/runtime/composables/useResizable';
 export { useScrollspy } from '../node_modules/@nuxt/ui/dist/runtime/composables/useScrollspy';
 export { toastMaxInjectionKey, useToast } from '../node_modules/@nuxt/ui/dist/runtime/composables/useToast';
-export { queryCollection, queryCollectionSearchSections, queryCollectionNavigation, queryCollectionItemSurroundings } from '../node_modules/@nuxt/content/dist/runtime/client';
-export { flatUnwrap as unwrapSlot } from '../node_modules/@nuxtjs/mdc/dist/runtime/utils/node';
-export { parseMarkdown } from '../node_modules/@nuxtjs/mdc/dist/runtime/parser';
-export { stringifyMarkdown } from '../node_modules/@nuxtjs/mdc/dist/runtime/stringify';
 export { useImage } from '../node_modules/@nuxt/image/dist/runtime/composables';
 export { useScript } from '../node_modules/@nuxt/scripts/dist/runtime/composables/useScript';
 export { useScriptEventPage } from '../node_modules/@nuxt/scripts/dist/runtime/composables/useScriptEventPage';
@@ -79,4 +75,8 @@ export { useScriptNpm } from '../node_modules/@nuxt/scripts/dist/runtime/registr
 export { useScriptGoogleTagManager } from '../node_modules/@nuxt/scripts/dist/runtime/registry/google-tag-manager';
 export { useScriptGoogleAnalytics } from '../node_modules/@nuxt/scripts/dist/runtime/registry/google-analytics';
 export { useScriptUmamiAnalytics } from '../node_modules/@nuxt/scripts/dist/runtime/registry/umami-analytics';
+export { queryCollection, queryCollectionSearchSections, queryCollectionNavigation, queryCollectionItemSurroundings } from '../node_modules/@nuxt/content/dist/runtime/client';
+export { flatUnwrap as unwrapSlot } from '../node_modules/@nuxtjs/mdc/dist/runtime/utils/node';
+export { parseMarkdown } from '../node_modules/@nuxtjs/mdc/dist/runtime/parser';
+export { stringifyMarkdown } from '../node_modules/@nuxtjs/mdc/dist/runtime/stringify';
 export { useColorMode } from '../node_modules/@nuxtjs/color-mode/dist/runtime/composables';
