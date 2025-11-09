@@ -10,6 +10,12 @@ import { RuntimeConfig as UserRuntimeConfig, PublicRuntimeConfig as UserPublicRu
       cdnURL: string,
    },
 
+   jwtSecret: string,
+
+   sessionSecret: string,
+
+   dbPath: string,
+
    nitro: {
       envPrefix: string,
    },
@@ -43,6 +49,8 @@ import { RuntimeConfig as UserRuntimeConfig, PublicRuntimeConfig as UserPublicRu
    },
   }
   interface SharedPublicRuntimeConfig {
+   apiBase: string,
+
    "nuxt-scripts": {
       version: string,
 

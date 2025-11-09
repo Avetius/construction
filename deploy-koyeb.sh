@@ -67,7 +67,11 @@ if koyeb app get $APP_NAME &> /dev/null; then
         --env NUXT_HOST=0.0.0.0 \
         --env NUXT_PORT=8000 \
         --env NUXT_DB_PATH=/app/data/construction.db \
-        --env NUXT_PUBLIC_API_BASE=/api
+        --env NUXT_PUBLIC_API_BASE=/api \
+        --env NUXT_JWT_SECRET=change-this-jwt-secret \
+        --env NUXT_SESSION_SECRET=change-this-session-secret \
+        --env NUXT_ADMIN_EMAIL=admin@construction.com \
+        --env NUXT_ADMIN_PASSWORD=admin123
 else
     echo "🆕 Creating new app '$APP_NAME'..."
     
@@ -84,6 +88,10 @@ else
         --env NUXT_PORT=8000 \
         --env NUXT_DB_PATH=/app/data/construction.db \
         --env NUXT_PUBLIC_API_BASE=/api \
+        --env NUXT_JWT_SECRET=change-this-jwt-secret \
+        --env NUXT_SESSION_SECRET=change-this-session-secret \
+        --env NUXT_ADMIN_EMAIL=admin@construction.com \
+        --env NUXT_ADMIN_PASSWORD=admin123 \
         --instance-type nano \
         --regions fra
 fi

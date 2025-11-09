@@ -8,8 +8,16 @@ export default defineNuxtConfig({
     preset: 'node-server',
     experimental: {
       wasm: true
+    },
+    // Disable prerendering to avoid build-time database issues
+    prerender: {
+      crawlLinks: false,
+      routes: []
     }
   },
+
+  // Disable SSG to prevent build-time execution
+  ssr: true,
 
   modules: [
     '@nuxt/eslint',
@@ -27,6 +35,10 @@ export default defineNuxtConfig({
     jwtSecret: 'default-jwt-secret',
     sessionSecret: 'default-session-secret',
     dbPath: './data/construction.db',
+    port: '3000',
+    host: '0.0.0.0',
+    adminEmail: 'admin@construction.com',
+    adminPassword: 'admin123',
     
     // Public keys (exposed to client-side)
     public: {
