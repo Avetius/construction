@@ -30,7 +30,18 @@
       
       <!-- Dashboard Overview -->
       <div v-if="currentView === 'dashboard'" class="dashboard-content">
-        <AdminDashboard />
+        <div class="dashboard-grid">
+          <div class="dashboard-section">
+            <AdminDashboard />
+          </div>
+          <div class="dashboard-section content-guide-section">
+            <div class="section-header">
+              <h2>Content Management Guide</h2>
+              <p>Learn how to use the new content management features</p>
+            </div>
+            <ContentGuide />
+          </div>
+        </div>
       </div>
       
       <!-- Projects Management -->
@@ -105,9 +116,12 @@ definePageMeta({
 const sidebarOpen = ref(true)
 const currentView = ref('dashboard')
 
+// Types
+type ViewType = 'dashboard' | 'projects' | 'clients' | 'team' | 'reports' | 'settings'
+
 // Computed properties
 const currentPageTitle = computed(() => {
-  const titles = {
+  const titles: Record<ViewType, string> = {
     dashboard: 'Dashboard',
     projects: 'Projects',
     clients: 'Clients', 
@@ -115,11 +129,11 @@ const currentPageTitle = computed(() => {
     reports: 'Reports',
     settings: 'Settings'
   }
-  return titles[currentView.value] || 'Dashboard'
+  return titles[currentView.value as ViewType] || 'Dashboard'
 })
 
 const currentPageSubtitle = computed(() => {
-  const subtitles = {
+  const subtitles: Record<ViewType, string> = {
     dashboard: 'Overview of your construction management system',
     projects: 'Manage and track all construction projects',
     clients: 'Client information and communication history',
@@ -127,11 +141,11 @@ const currentPageSubtitle = computed(() => {
     reports: 'Analytics and performance reports',
     settings: 'System configuration and preferences'
   }
-  return subtitles[currentView.value] || ''
+  return subtitles[currentView.value as ViewType] || ''
 })
 
 const quickActionLabel = computed(() => {
-  const labels = {
+  const labels: Record<ViewType, string> = {
     dashboard: 'New Project',
     projects: 'Add Project',
     clients: 'Add Client',
@@ -139,7 +153,7 @@ const quickActionLabel = computed(() => {
     reports: 'Generate Report',
     settings: 'Save Settings'
   }
-  return labels[currentView.value] || 'Quick Action'
+  return labels[currentView.value as ViewType] || 'Quick Action'
 })
 
 // Methods
@@ -254,6 +268,42 @@ watch(currentView, (newView) => {
 .reports-content,
 .settings-content {
   animation: fadeIn 0.3s ease;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.dashboard-section {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.content-guide-section {
+  padding: 0;
+}
+
+.content-guide-section .section-header {
+  padding: 2rem 2rem 1rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  margin: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.content-guide-section .section-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.content-guide-section .section-header p {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 0.875rem;
 }
 
 .view-placeholder {
