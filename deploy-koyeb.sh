@@ -61,6 +61,7 @@ if koyeb app get $APP_NAME &> /dev/null; then
         --git github.com/Avetius/construction \
         --git-branch docker \
         --git-dockerfile Dockerfile.koyeb \
+        --run-command "node .output/server/index.mjs" \
         --ports 8000:http \
         --env NODE_ENV=production \
         --env NUXT_HOST=0.0.0.0 \
@@ -76,6 +77,7 @@ else
         --git github.com/Avetius/construction \
         --git-branch docker \
         --git-dockerfile Dockerfile.koyeb \
+        --run-command "node .output/server/index.mjs" \
         --ports 8000:http \
         --env NODE_ENV=production \
         --env NUXT_HOST=0.0.0.0 \
