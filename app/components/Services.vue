@@ -153,6 +153,7 @@
 </script>
 
 <style scoped>
+/* === LAYOUT & SECTIONS === */
 .services-section {
   padding: 6rem 0;
   background-color: white;
@@ -160,12 +161,18 @@
 
 .section-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin: 0 auto 4rem auto;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* === TYPOGRAPHY === */
 .section-title {
   font-size: 2.5rem;
   font-weight: 700;
@@ -179,13 +186,20 @@
   line-height: 1.6;
 }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
+.service-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
 }
 
+.service-card > p {
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* === SERVICE CARDS === */
 .service-card {
   background: #f9fafb;
   border: 1px solid #e5e7eb;
@@ -208,6 +222,7 @@
   background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
 }
 
+/* === SERVICE ELEMENTS === */
 .featured-badge {
   position: absolute;
   top: -0.5rem;
@@ -237,19 +252,6 @@
   color: white;
 }
 
-.service-card h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #1f2937;
-  margin-bottom: 1rem;
-}
-
-.service-card > p {
-  color: #6b7280;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
-
 .service-features {
   list-style: none;
   padding: 0;
@@ -258,10 +260,9 @@
 }
 
 .service-features li {
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0.5rem 1.5rem;
   color: #374151;
   position: relative;
-  padding-left: 1.5rem;
 }
 
 .service-features li::before {
@@ -276,8 +277,9 @@
   margin-top: auto;
 }
 
+/* === BUTTONS === */
 .btn {
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 0.75rem;
   border-radius: 0.5rem;
   font-weight: 600;
   text-decoration: none;
@@ -287,7 +289,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 100%;
+  width: calc(100% - 1.5rem);
 }
 
 .btn-primary {
@@ -296,22 +298,10 @@
   border-color: #3b82f6;
 }
 
-.btn-primary:hover {
-  background-color: #2563eb;
-  border-color: #2563eb;
-  transform: translateY(-2px);
-}
-
 .btn-outline {
   background-color: transparent;
   color: #3b82f6;
   border-color: #3b82f6;
-}
-
-.btn-outline:hover {
-  background-color: #3b82f6;
-  color: white;
-  transform: translateY(-2px);
 }
 
 .btn-large {
@@ -319,6 +309,23 @@
   font-size: 1.125rem;
 }
 
+/* === BUTTON HOVER STATES === */
+.btn-primary:hover,
+.btn-outline:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+.btn-outline:hover {
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* === CTA SECTION === */
 .services-cta {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 1rem;
@@ -336,10 +343,8 @@
 .cta-content p {
   font-size: 1.125rem;
   opacity: 0.9;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem auto;
   max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .services-cta .btn-primary {
@@ -354,7 +359,7 @@
   transform: translateY(-2px);
 }
 
-/* Responsive Design */
+/* === RESPONSIVE DESIGN === */
 @media (max-width: 768px) {
   .services-section {
     padding: 4rem 0;

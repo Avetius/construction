@@ -23,6 +23,7 @@ interface _GlobalComponents {
   'AdminSidebar': typeof import("../../app/components/AdminSidebar.vue")['default']
   'Contacts': typeof import("../../app/components/Contacts.vue")['default']
   'ContentEditor': typeof import("../../app/components/ContentEditor.vue")['default']
+  'ContentGuide': typeof import("../../app/components/ContentGuide.vue")['default']
   'Footer': typeof import("../../app/components/Footer.vue")['default']
   'Header': typeof import("../../app/components/Header.vue")['default']
   'Hero': typeof import("../../app/components/Hero.vue")['default']
@@ -445,6 +446,7 @@ interface _GlobalComponents {
   'LazyAdminSidebar': LazyComponent<typeof import("../../app/components/AdminSidebar.vue")['default']>
   'LazyContacts': LazyComponent<typeof import("../../app/components/Contacts.vue")['default']>
   'LazyContentEditor': LazyComponent<typeof import("../../app/components/ContentEditor.vue")['default']>
+  'LazyContentGuide': LazyComponent<typeof import("../../app/components/ContentGuide.vue")['default']>
   'LazyFooter': LazyComponent<typeof import("../../app/components/Footer.vue")['default']>
   'LazyHeader': LazyComponent<typeof import("../../app/components/Header.vue")['default']>
   'LazyHero': LazyComponent<typeof import("../../app/components/Hero.vue")['default']>
