@@ -1,0 +1,31 @@
+# Koyeb Deployment Configuration
+name: construction-management
+services:
+  - name: construction-app
+    type: web
+    instance_type: nano
+    regions:
+      - fra
+    run_command: "node .output/server/index.mjs"
+    env:
+      - NODE_ENV=production
+      - NUXT_HOST=0.0.0.0
+      - NUXT_PORT=8000
+      - NUXT_DB_PATH=/app/data/construction.db
+      - NUXT_PUBLIC_API_BASE=/api
+    ports:
+      - port: 8000
+        protocol: http
+    health_check:
+      http:
+        path: /api/health
+        port: 8000
+    volumes:
+      - name: sqlite-data
+        mount_path: /app/data
+        size: 1GB
+    docker:
+      dockerfile: ./Dockerfile.koyeb
+    scaling:
+      min: 1
+      max: 3

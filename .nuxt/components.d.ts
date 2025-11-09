@@ -15,10 +15,19 @@ type LazyComponent<T> = DefineComponent<HydrationStrategies, {}, {}, {}, {}, {},
 
 
 export const About: typeof import("../app/components/About.vue")['default']
+export const AdminClients: typeof import("../app/components/AdminClients.vue")['default']
+export const AdminContent: typeof import("../app/components/AdminContent.vue")['default']
+export const AdminDashboard: typeof import("../app/components/AdminDashboard.vue")['default']
+export const AdminHeader: typeof import("../app/components/AdminHeader.vue")['default']
+export const AdminProjects: typeof import("../app/components/AdminProjects.vue")['default']
+export const AdminSidebar: typeof import("../app/components/AdminSidebar.vue")['default']
 export const Contacts: typeof import("../app/components/Contacts.vue")['default']
+export const ContentEditor: typeof import("../app/components/ContentEditor.vue")['default']
+export const ContentGuide: typeof import("../app/components/ContentGuide.vue")['default']
 export const Footer: typeof import("../app/components/Footer.vue")['default']
 export const Header: typeof import("../app/components/Header.vue")['default']
 export const Hero: typeof import("../app/components/Hero.vue")['default']
+export const MediaLibrary: typeof import("../app/components/MediaLibrary.vue")['default']
 export const Services: typeof import("../app/components/Services.vue")['default']
 export const ScriptGoogleMapsDVue: typeof import("../node_modules/@nuxt/scripts/dist/runtime/components/GoogleMaps/ScriptGoogleMaps.d.vue")['default']
 export const ScriptGoogleMaps: typeof import("../node_modules/@nuxt/scripts/dist/runtime/components/GoogleMaps/ScriptGoogleMaps.vue")['default']
@@ -429,10 +438,19 @@ export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const LazyAbout: LazyComponent<typeof import("../app/components/About.vue")['default']>
+export const LazyAdminClients: LazyComponent<typeof import("../app/components/AdminClients.vue")['default']>
+export const LazyAdminContent: LazyComponent<typeof import("../app/components/AdminContent.vue")['default']>
+export const LazyAdminDashboard: LazyComponent<typeof import("../app/components/AdminDashboard.vue")['default']>
+export const LazyAdminHeader: LazyComponent<typeof import("../app/components/AdminHeader.vue")['default']>
+export const LazyAdminProjects: LazyComponent<typeof import("../app/components/AdminProjects.vue")['default']>
+export const LazyAdminSidebar: LazyComponent<typeof import("../app/components/AdminSidebar.vue")['default']>
 export const LazyContacts: LazyComponent<typeof import("../app/components/Contacts.vue")['default']>
+export const LazyContentEditor: LazyComponent<typeof import("../app/components/ContentEditor.vue")['default']>
+export const LazyContentGuide: LazyComponent<typeof import("../app/components/ContentGuide.vue")['default']>
 export const LazyFooter: LazyComponent<typeof import("../app/components/Footer.vue")['default']>
 export const LazyHeader: LazyComponent<typeof import("../app/components/Header.vue")['default']>
 export const LazyHero: LazyComponent<typeof import("../app/components/Hero.vue")['default']>
+export const LazyMediaLibrary: LazyComponent<typeof import("../app/components/MediaLibrary.vue")['default']>
 export const LazyServices: LazyComponent<typeof import("../app/components/Services.vue")['default']>
 export const LazyScriptGoogleMapsDVue: LazyComponent<typeof import("../node_modules/@nuxt/scripts/dist/runtime/components/GoogleMaps/ScriptGoogleMaps.d.vue")['default']>
 export const LazyScriptGoogleMaps: LazyComponent<typeof import("../node_modules/@nuxt/scripts/dist/runtime/components/GoogleMaps/ScriptGoogleMaps.vue")['default']>

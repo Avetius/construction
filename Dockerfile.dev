@@ -1,0 +1,23 @@
+# Development Dockerfile
+FROM node:20-alpine
+
+# Install dependencies for SQLite and development
+RUN apk add --no-cache sqlite python3 make g++ git
+
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+COPY pnpm-lock.yaml* ./
+
+# Install dependencies
+RUN corepack enable pnpm && pnpm install
+
+# Create data directory
+RUN mkdir -p /app/data
+
+# Expose ports for Nuxt and DevTools
+EXPOSE 3000 24678
+
+# Start development server
+CMD ["npm", "run", "dev"]

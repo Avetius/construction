@@ -1,0 +1,90 @@
+version: '3.8'
+
+services:
+  # Nuxt Application
+  construction-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: construction-app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NUXT_DB_PATH=/app/data/construction.db
+      - NUXT_PUBLIC_API_BASE=/api
+    volumes:
+      # Mount SQLite database directory
+      - sqlite_data:/app/data
+      # Mount uploads directory (for media files)
+      - uploads_data:/app/uploads
+    networks:
+      - construction-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+  # SQLite Admin (Optional - for database management)
+  sqlite-web:
+    image: coleifer/sqlite-web
+    container_name: construction-sqlite-admin
+    ports:
+      - "8080:8080"
+    volumes:
+      - sqlite_data:/data
+    command: ["-H", "0.0.0.0", "-p", "8080", "/data/construction.db"]
+    networks:
+      - construction-network
+    restart: unless-stopped
+    depends_on:
+      - construction-app
+
+  # Nginx Reverse Proxy (Optional - for production)
+  nginx:
+    image: nginx:alpine
+    container_name: construction-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - uploads_data:/var/www/uploads
+      - ssl_certs:/etc/nginx/ssl
+    networks:
+      - construction-network
+    restart: unless-stopped
+    depends_on:
+      - construction-app
+
+volumes:
+  # SQLite database storage
+  sqlite_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./data/sqlite
+  
+  # File uploads storage
+  uploads_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./data/uploads
+  
+  # SSL certificates storage
+  ssl_certs:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./data/ssl
+
+networks:
+  construction-network:
+    driver: bridge
