@@ -1,7 +1,10 @@
-import { db } from '../utils/database'
+import { getDatabase } from '../utils/database'
 
 export default defineEventHandler(async (event) => {
   try {
+    // Initialize database on first health check
+    const db = await getDatabase()
+    
     // Test database connection
     const result = db.prepare('SELECT 1 as test').get()
     
@@ -9,9 +12,7 @@ export default defineEventHandler(async (event) => {
       status: 'healthy',
       timestamp: new Date().toISOString(),
       database: 'connected',
-      uptime: process.uptime(),
-      memory: process.memoryUsage(),
-      version: process.version
+      test: result
     }
   } catch (error) {
     setResponseStatus(event, 500)

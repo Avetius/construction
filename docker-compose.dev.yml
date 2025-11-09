@@ -8,12 +8,18 @@ services:
       dockerfile: Dockerfile.dev
     container_name: construction-dev
     ports:
-      - "3000:3000"
+      - "${APP_PORT:-3000}:${NUXT_PORT:-3000}"
       - "24678:24678" # Nuxt DevTools
     environment:
       - NODE_ENV=development
+      - NUXT_PORT=${NUXT_PORT:-3000}
+      - NUXT_HOST=${NUXT_HOST:-0.0.0.0}
       - NUXT_DB_PATH=/app/data/construction.db
       - NUXT_PUBLIC_API_BASE=/api
+      - NUXT_JWT_SECRET=${JWT_SECRET:-dev-jwt-secret}
+      - NUXT_SESSION_SECRET=${SESSION_SECRET:-dev-session-secret}
+      - NUXT_ADMIN_EMAIL=${ADMIN_EMAIL:-admin@construction.local}
+      - NUXT_ADMIN_PASSWORD=${ADMIN_PASSWORD:-admin123}
     volumes:
       # Mount source code for hot reload
       - .:/app
@@ -32,10 +38,10 @@ services:
     image: coleifer/sqlite-web
     container_name: construction-sqlite-dev
     ports:
-      - "8080:8080"
+      - "${SQLITE_ADMIN_PORT:-8080}:8080"
     volumes:
       - ./data/sqlite:/data
-    command: ["-H", "0.0.0.0", "-p", "8080", "/data/construction.db"]
+    command: ["sqlite-web", "-H", "0.0.0.0", "-p", "8080", "/data/construction.db"]
     networks:
       - construction-network
     restart: unless-stopped

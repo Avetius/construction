@@ -1,7 +1,7 @@
 
 /// <reference path="app.config.d.ts" />
 /// <reference path="runtime-config.d.ts" />
-/// <reference types="/mnt/c/Users/avets/Documents/construction/node_modules/@nuxt/nitro-server/dist/index.mjs" />
+/// <reference types="C:/Users/avets/Documents/construction/node_modules/@nuxt/nitro-server/dist/index.mjs" />
 /// <reference path="../image/providers.d.ts" />
 /// <reference path="nitro-middleware.d.ts" />
 
