@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  # Nuxt Development Server
+  construction-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: construction-dev
+    ports:
+      - "3000:3000"
+      - "24678:24678" # Nuxt DevTools
+    environment:
+      - NODE_ENV=development
+      - NUXT_DB_PATH=/app/data/construction.db
+      - NUXT_PUBLIC_API_BASE=/api
+    volumes:
+      # Mount source code for hot reload
+      - .:/app
+      - /app/node_modules
+      # Mount database directory
+      - ./data/sqlite:/app/data
+      # Mount uploads directory
+      - ./data/uploads:/app/uploads
+    networks:
+      - construction-network
+    restart: unless-stopped
+    command: ["npm", "run", "dev"]
+
+  # SQLite Admin for Development
+  sqlite-web-dev:
+    image: coleifer/sqlite-web
+    container_name: construction-sqlite-dev
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data/sqlite:/data
+    command: ["-H", "0.0.0.0", "-p", "8080", "/data/construction.db"]
+    networks:
+      - construction-network
+    restart: unless-stopped
+
+networks:
+  construction-network:
+    driver: bridge
