@@ -1,0 +1,61 @@
+# Koyeb Dockerfile - Optimized for serverless deployment
+FROM node:20-alpine AS base
+
+# Install dependencies for SQLite
+RUN apk add --no-cache libc6-compat sqlite python3 make g++
+
+WORKDIR /app
+
+# Install dependencies
+FROM base AS deps
+COPY package*.json ./
+COPY pnpm-lock.yaml* ./
+RUN corepack enable pnpm && \
+    pnpm install --frozen-lockfile --production=false
+
+# Build application
+FROM base AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+
+# Build for production
+ENV NODE_ENV=production
+RUN corepack enable pnpm && \
+    pnpm run build
+
+# Production runtime
+FROM node:20-alpine AS runner
+WORKDIR /app
+
+# Install runtime dependencies
+RUN apk add --no-cache sqlite curl
+
+# Set production environment
+ENV NODE_ENV=production
+ENV HOST=0.0.0.0
+ENV PORT=8000
+
+# Create app user
+RUN addgroup --system --gid 1001 nodejs && \
+    adduser --system --uid 1001 nuxtjs
+
+# Copy built application
+COPY --from=builder --chown=nuxtjs:nodejs /app/.output ./.output
+COPY --from=builder --chown=nuxtjs:nodejs /app/package.json ./package.json
+
+# Create data directory with proper permissions
+RUN mkdir -p /app/data && chown -R nuxtjs:nodejs /app/data
+
+# Switch to non-root user
+USER nuxtjs
+
+# Expose port (Koyeb expects 8000)
+EXPOSE 8000
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
+  CMD curl -f http://localhost:8000/api/health || exit 1
+
+# Start application
+CMD ["node", ".output/server/index.mjs"]
