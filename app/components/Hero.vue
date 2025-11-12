@@ -3,32 +3,31 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-text">
-          <h1 class="hero-title">Building Your Future</h1>
-          <h2 class="hero-subtitle">Professional Construction Management Solutions</h2>
+          <h1 class="hero-title">{{ $t('hero.title') }}</h1>
+          <h2 class="hero-subtitle">{{ $t('hero.subtitle') }}</h2>
           <p class="hero-description">
-            Transform your construction projects with our comprehensive management platform. 
-            From planning to completion, we provide the tools and expertise you need to succeed.
+            {{ $t('hero.description') }}
           </p>
           <div class="hero-actions">
             <NuxtLink to="/register" class="btn btn-primary btn-large">
-              Get Started Today
+              {{ $t('hero.cta') }}
             </NuxtLink>
             <NuxtLink to="#about" class="btn btn-secondary btn-large">
-              Learn More
+              {{ $t('hero.learnMore') }}
             </NuxtLink>
           </div>
           <div class="hero-stats">
             <div class="stat">
-              <span class="stat-number">500+</span>
-              <span class="stat-label">Projects Completed</span>
+              <span class="stat-number">{{ $t('hero.stats.projects.number') }}</span>
+              <span class="stat-label">{{ $t('hero.stats.projects.label') }}</span>
             </div>
             <div class="stat">
-              <span class="stat-number">50+</span>
-              <span class="stat-label">Happy Clients</span>
+              <span class="stat-number">{{ $t('hero.stats.clients.number') }}</span>
+              <span class="stat-label">{{ $t('hero.stats.clients.label') }}</span>
             </div>
             <div class="stat">
-              <span class="stat-number">10+</span>
-              <span class="stat-label">Years Experience</span>
+              <span class="stat-number">{{ $t('hero.stats.experience.number') }}</span>
+              <span class="stat-label">{{ $t('hero.stats.experience.label') }}</span>
             </div>
           </div>
         </div>

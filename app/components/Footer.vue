@@ -5,8 +5,8 @@
         <!-- Company Info -->
         <div class="footer-section">
           <div class="footer-logo">
-            <h3>Construction</h3>
-            <p>Building excellence through innovation, expertise, and dedication to quality construction management.</p>
+            <h3>{{ $t('footer.company') }}</h3>
+            <p>{{ $t('footer.tagline') }}</p>
           </div>
           <div class="social-links">
             <a href="#" class="social-link" aria-label="Facebook">
@@ -34,51 +34,51 @@
         
         <!-- Quick Links -->
         <div class="footer-section">
-          <h4>Quick Links</h4>
+          <h4>{{ $t('footer.quickLinks') }}</h4>
           <ul class="footer-links">
-            <li><NuxtLink to="#hero">Home</NuxtLink></li>
-            <li><NuxtLink to="#about">About Us</NuxtLink></li>
-            <li><NuxtLink to="#services">Services</NuxtLink></li>
-            <li><NuxtLink to="#contacts">Contact</NuxtLink></li>
+            <li><NuxtLink to="#hero">{{ $t('nav.home') }}</NuxtLink></li>
+            <li><NuxtLink to="#about">{{ $t('nav.about') }}</NuxtLink></li>
+            <li><NuxtLink to="#services">{{ $t('nav.services') }}</NuxtLink></li>
+            <li><NuxtLink to="#contacts">{{ $t('nav.contact') }}</NuxtLink></li>
           </ul>
         </div>
         
         <!-- Services -->
         <div class="footer-section">
-          <h4>Services</h4>
+          <h4>{{ $t('footer.services') }}</h4>
           <ul class="footer-links">
-            <li><a href="#services">Residential Construction</a></li>
-            <li><a href="#services">Commercial Construction</a></li>
-            <li><a href="#services">Renovation & Remodeling</a></li>
-            <li><a href="#services">Project Management</a></li>
-            <li><a href="#services">Consulting Services</a></li>
-            <li><a href="#services">Design & Engineering</a></li>
+            <li><a href="#services">{{ $t('services.residential.title') }}</a></li>
+            <li><a href="#services">{{ $t('services.commercial.title') }}</a></li>
+            <li><a href="#services">{{ $t('services.renovation.title') }}</a></li>
+            <li><a href="#services">{{ $t('services.projectManagement.title') }}</a></li>
+            <li><a href="#services">{{ $t('footer.consulting') }}</a></li>
+            <li><a href="#services">{{ $t('footer.design') }}</a></li>
           </ul>
         </div>
         
         <!-- Contact Info -->
         <div class="footer-section">
-          <h4>Contact Info</h4>
+          <h4>{{ $t('footer.contactInfo') }}</h4>
           <div class="contact-info">
             <div class="contact-item">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                 <circle cx="12" cy="10" r="3"/>
               </svg>
-              <span>123 Construction Ave<br>Building City, BC 12345</span>
+              <span>{{ $t('contact.info.address.street') }}<br>{{ $t('contact.info.address.city') }}</span>
             </div>
             <div class="contact-item">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
               </svg>
-              <span>+1 (555) 123-4567</span>
+              <span>{{ $t('contact.info.phone.number') }}</span>
             </div>
             <div class="contact-item">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                 <polyline points="22,6 12,13 2,6"/>
               </svg>
-              <span>info@construction.com</span>
+              <span>{{ $t('contact.info.email.address') }}</span>
             </div>
           </div>
         </div>
@@ -87,20 +87,20 @@
       <!-- Newsletter Signup -->
       <div class="newsletter-section">
         <div class="newsletter-content">
-          <h4>Stay Updated</h4>
-          <p>Subscribe to our newsletter for the latest construction tips and project updates.</p>
+          <h4>{{ $t('footer.newsletter.title') }}</h4>
+          <p>{{ $t('footer.newsletter.description') }}</p>
         </div>
         <form @submit.prevent="handleNewsletterSubmit" class="newsletter-form">
           <input
             v-model="newsletterEmail"
             type="email"
-            placeholder="Enter your email address"
+            :placeholder="$t('footer.newsletter.placeholder')"
             class="newsletter-input"
             required
           >
           <button type="submit" class="newsletter-btn" :disabled="isNewsletterSubmitting">
-            <span v-if="isNewsletterSubmitting">Subscribing...</span>
-            <span v-else>Subscribe</span>
+            <span v-if="isNewsletterSubmitting">{{ $t('footer.newsletter.subscribing') }}</span>
+            <span v-else>{{ $t('footer.newsletter.subscribe') }}</span>
           </button>
         </form>
       </div>
@@ -108,11 +108,11 @@
       <!-- Footer Bottom -->
       <div class="footer-bottom">
         <div class="footer-bottom-content">
-          <p>&copy; 2025 Construction. All rights reserved.</p>
+          <p>{{ $t('footer.copyright') }}</p>
           <div class="footer-legal">
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/terms">Terms of Service</a>
-            <a href="/cookies">Cookie Policy</a>
+            <a href="/privacy">{{ $t('footer.privacy') }}</a>
+            <a href="/terms">{{ $t('footer.terms') }}</a>
+            <a href="/cookies">{{ $t('footer.cookies') }}</a>
           </div>
         </div>
       </div>
@@ -123,6 +123,7 @@
 <script setup lang="ts">
 const newsletterEmail = ref('')
 const isNewsletterSubmitting = ref(false)
+// const { t } = useI18n();
 
 const handleNewsletterSubmit = async () => {
   isNewsletterSubmitting.value = true

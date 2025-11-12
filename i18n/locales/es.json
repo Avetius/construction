@@ -1,6 +1,196 @@
 {
-    "greeting": "Hello",
-    "farewell": "Goodbye",
-    "thank_you": "Thank you",
-    "welcome": "Welcome"
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "login": "Iniciar Sesión",
+    "getStarted": "Empezar"
+  },
+  "hero": {
+    "title": "Construyendo la Infraestructura del Mañana Hoy",
+    "subtitle": "Servicios de construcción profesional con más de 20 años de experiencia",
+    "description": "Transforme sus proyectos de construcción con nuestra plataforma integral de gestión. Desde la planificación hasta la finalización, proporcionamos las herramientas y la experiencia que necesita para tener éxito.",
+    "cta": "Inicie Su Proyecto",
+    "learnMore": "Saber Más",
+    "stats": {
+      "projects": {
+        "number": "500+",
+        "label": "Proyectos Completados"
+      },
+      "clients": {
+        "number": "50+",
+        "label": "Clientes Satisfechos"
+      },
+      "experience": {
+        "number": "10+",
+        "label": "Años de Experiencia"
+      }
+    }
+  },
+  "about": {
+    "title": "Sobre Nosotros",
+    "subtitle": "Construyendo excelencia a través de la innovación, experiencia y dedicación a la gestión de construcción de calidad.",
+    "whoWeAre": {
+      "title": "Quiénes Somos",
+      "description": "Con más de una década de experiencia en la industria de la construcción, nos hemos establecido como un socio de confianza para soluciones de gestión de construcción. Nuestro equipo combina la artesanía tradicional con tecnología moderna para entregar resultados excepcionales."
+    },
+    "mission": {
+      "title": "Nuestra Misión",
+      "description": "Revolucionar la gestión de proyectos de construcción proporcionando herramientas innovadoras, orientación experta y soluciones integrales que aseguren que los proyectos se completen a tiempo, dentro del presupuesto y con los más altos estándares de calidad."
+    },
+    "values": {
+      "title": "Nuestros Valores",
+      "quality": {
+        "title": "Calidad Primero",
+        "description": "Nunca comprometemos la calidad de nuestro trabajo o servicios."
+      },
+      "innovation": {
+        "title": "Innovación",
+        "description": "Adoptando nuevas tecnologías para mejorar los procesos de construcción."
+      },
+      "reliability": {
+        "title": "Confiabilidad",
+        "description": "Asociaciones confiables construidas sobre confianza y transparencia."
+      },
+      "safety": {
+        "title": "Seguridad",
+        "description": "Priorizando la seguridad de todos los trabajadores y partes interesadas."
+      }
+    },
+    "cta": {
+      "title": "¿Listo para Iniciar Su Próximo Proyecto?",
+      "description": "Hablemos sobre cómo podemos ayudar a dar vida a su visión de construcción.",
+      "contact": "Contáctenos",
+      "services": "Ver Servicios"
+    }
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Soluciones integrales de gestión de construcción adaptadas a las necesidades de su proyecto.",
+    "residential": {
+      "title": "Construcción Residencial",
+      "description": "Construcción de viviendas personalizadas y proyectos de desarrollo residencial con atención al detalle y artesanía de calidad.",
+      "features": [
+        "Diseño de Viviendas Personalizadas",
+        "Renovaciones de Viviendas",
+        "Remodelación de Cocinas y Baños",
+        "Ampliaciones y Extensiones"
+      ]
+    },
+    "commercial": {
+      "title": "Construcción Comercial",
+      "description": "Proyectos comerciales a gran escala que incluyen edificios de oficinas, espacios comerciales e instalaciones industriales.",
+      "badge": "Más Popular",
+      "features": [
+        "Edificios de Oficinas",
+        "Espacios Comerciales",
+        "Almacenes e Industriales",
+        "Instalaciones de Salud"
+      ]
+    },
+    "renovation": {
+      "title": "Renovación y Remodelación",
+      "description": "Transforme espacios existentes con nuestros servicios integrales de renovación y remodelación.",
+      "features": [
+        "Renovaciones Interiores",
+        "Mejoras Exteriores",
+        "Restauraciones Históricas",
+        "Mejoras de Eficiencia Energética"
+      ]
+    },
+    "projectManagement": {
+      "title": "Gestión de Proyectos",
+      "description": "Servicios de gestión de proyectos de principio a fin que aseguran entrega oportuna y cumplimiento del presupuesto.",
+      "features": [
+        "Planificación de Cronograma",
+        "Gestión de Presupuesto",
+        "Control de Calidad",
+        "Evaluación de Riesgos"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contáctenos",
+    "subtitle": "¿Listo para iniciar su proyecto de construcción? Estamos aquí para ayudar a dar vida a su visión.",
+    "form": {
+      "title": "Envíenos un Mensaje",
+      "subtitle": "Complete el formulario a continuación y nos pondremos en contacto con usted lo antes posible.",
+      "firstName": "Nombre",
+      "firstNamePlaceholder": "Ingrese su nombre",
+      "lastName": "Apellido",
+      "lastNamePlaceholder": "Ingrese su apellido",
+      "email": "Correo Electrónico",
+      "emailPlaceholder": "Ingrese su correo electrónico",
+      "phone": "Número de Teléfono",
+      "phonePlaceholder": "Ingrese su número de teléfono",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntenos sobre su proyecto...",
+      "submit": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "privacyNote": "* Campos obligatorios. Respetamos su privacidad y nunca compartiremos su información."
+    },
+    "info": {
+      "phone": {
+        "title": "Teléfono",
+        "number": "+1 (555) 123-4567",
+        "hours": "Lun-Vie 8:00 AM - 6:00 PM"
+      },
+      "email": {
+        "title": "Correo Electrónico",
+        "address": "address",
+        "response": "Responderemos en 24 horas"
+      },
+      "address": {
+        "title": "Dirección",
+        "street": "123 Avenida Construcción",
+        "city": "Ciudad Edificación, BC 12345",
+        "note": "Visite nuestra oficina principal"
+      }
+    }
+  },
+  "footer": {
+    "company": "Construcción",
+    "tagline": "Construyendo excelencia a través de la innovación, experiencia y dedicación a la gestión de construcción de calidad.",
+    "quickLinks": "Enlaces Rápidos",
+    "services": "Servicios",
+    "consulting": "Servicios de Consultoría",
+    "design": "Diseño e Ingeniería",
+    "contactInfo": "Información de Contacto",
+    "newsletter": {
+      "title": "Manténgase Actualizado",
+      "description": "Suscríbase a nuestro boletín para obtener los últimos consejos de construcción y actualizaciones de proyectos.",
+      "placeholder": "Ingrese su correo electrónico",
+      "subscribe": "Suscribirse",
+      "subscribing": "Suscribiendo..."
+    },
+    "copyright": "© 2025 Construcción. Todos los derechos reservados.",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "cookies": "Política de Cookies"
+  },
+  "admin": {
+    "dashboard": "Panel de Control",
+    "content": "Contenido",
+    "projects": "Proyectos",
+    "clients": "Clientes",
+    "media": "Biblioteca de Medios",
+    "settings": "Configuración",
+    "logout": "Cerrar Sesión"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "create": "Crear",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "close": "Cerrar",
+    "learnMore": "Saber Más",
+    "getStarted": "Empezar"
+  }
 }

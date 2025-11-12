@@ -2,46 +2,42 @@
   <section id="about" class="about-section">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">About Construction</h2>
+        <h2 class="section-title">{{ $t('about.title') }}</h2>
         <p class="section-subtitle">
-          Building excellence through innovation, expertise, and dedication to quality construction management.
+          {{ $t('about.subtitle') }}
         </p>
       </div>
       
       <div class="about-content">
         <div class="about-text">
           <div class="about-intro">
-            <h3>Who We Are</h3>
+            <h3>{{ $t('about.whoWeAre.title') }}</h3>
             <p>
-              With over a decade of experience in the construction industry, we've established ourselves 
-              as a trusted partner for construction management solutions. Our team combines traditional 
-              craftsmanship with modern technology to deliver exceptional results.
+              {{ $t('about.whoWeAre.description') }}
             </p>
           </div>
           
           <div class="about-mission">
-            <h3>Our Mission</h3>
+            <h3>{{ $t('about.mission.title') }}</h3>
             <p>
-              To revolutionize construction project management by providing innovative tools, expert guidance, 
-              and comprehensive solutions that ensure projects are completed on time, within budget, and to 
-              the highest quality standards.
+              {{ $t('about.mission.description') }}
             </p>
           </div>
           
           <div class="about-values">
-            <h3>Our Values</h3>
+            <h3>{{ $t('about.values.title') }}</h3>
             <ul class="values-list">
               <li>
-                <strong>Quality First:</strong> We never compromise on the quality of our work or services.
+                <strong>{{ $t('about.values.quality.title') }}:</strong> {{ $t('about.values.quality.description') }}
               </li>
               <li>
-                <strong>Innovation:</strong> Embracing new technologies to improve construction processes.
+                <strong>{{ $t('about.values.innovation.title') }}:</strong> {{ $t('about.values.innovation.description') }}
               </li>
               <li>
-                <strong>Reliability:</strong> Dependable partnerships built on trust and transparency.
+                <strong>{{ $t('about.values.reliability.title') }}:</strong> {{ $t('about.values.reliability.description') }}
               </li>
               <li>
-                <strong>Safety:</strong> Prioritizing the safety of all workers and stakeholders.
+                <strong>{{ $t('about.values.safety.title') }}:</strong> {{ $t('about.values.safety.description') }}
               </li>
             </ul>
           </div>
@@ -103,11 +99,11 @@
       
       <div class="about-cta">
         <div class="cta-content">
-          <h3>Ready to Start Your Next Project?</h3>
-          <p>Let's discuss how we can help bring your construction vision to life.</p>
+          <h3>{{ $t('about.cta.title') }}</h3>
+          <p>{{ $t('about.cta.description') }}</p>
           <div class="cta-actions">
-            <NuxtLink to="#contacts" class="btn btn-primary">Get In Touch</NuxtLink>
-            <NuxtLink to="#services" class="btn btn-outline">View Services</NuxtLink>
+            <NuxtLink to="#contacts" class="btn btn-primary">{{ $t('about.cta.contact') }}</NuxtLink>
+            <NuxtLink to="#services" class="btn btn-outline">{{ $t('about.cta.services') }}</NuxtLink>
           </div>
         </div>
       </div>

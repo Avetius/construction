@@ -27,6 +27,7 @@ export const ContentGuide: typeof import("../app/components/ContentGuide.vue")['
 export const Footer: typeof import("../app/components/Footer.vue")['default']
 export const Header: typeof import("../app/components/Header.vue")['default']
 export const Hero: typeof import("../app/components/Hero.vue")['default']
+export const LanguageSwitcher: typeof import("../app/components/LanguageSwitcher.vue")['default']
 export const MediaLibrary: typeof import("../app/components/MediaLibrary.vue")['default']
 export const Services: typeof import("../app/components/Services.vue")['default']
 export const ScriptGoogleMapsDVue: typeof import("../node_modules/@nuxt/scripts/dist/runtime/components/GoogleMaps/ScriptGoogleMaps.d.vue")['default']
@@ -450,6 +451,7 @@ export const LazyContentGuide: LazyComponent<typeof import("../app/components/Co
 export const LazyFooter: LazyComponent<typeof import("../app/components/Footer.vue")['default']>
 export const LazyHeader: LazyComponent<typeof import("../app/components/Header.vue")['default']>
 export const LazyHero: LazyComponent<typeof import("../app/components/Hero.vue")['default']>
+export const LazyLanguageSwitcher: LazyComponent<typeof import("../app/components/LanguageSwitcher.vue")['default']>
 export const LazyMediaLibrary: LazyComponent<typeof import("../app/components/MediaLibrary.vue")['default']>
 export const LazyServices: LazyComponent<typeof import("../app/components/Services.vue")['default']>
 export const LazyScriptGoogleMapsDVue: LazyComponent<typeof import("../node_modules/@nuxt/scripts/dist/runtime/components/GoogleMaps/ScriptGoogleMaps.d.vue")['default']>

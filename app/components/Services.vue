@@ -2,9 +2,9 @@
   <section id="services" class="services-section">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Our Services</h2>
+        <h2 class="section-title">{{ $t('services.title') }}</h2>
         <p class="section-subtitle">
-          Comprehensive construction management solutions tailored to meet your project needs.
+          {{ $t('services.subtitle') }}
         </p>
       </div>
       
@@ -17,21 +17,21 @@
               <path d="M19 21V11l-6-4"/>
             </svg>
           </div>
-          <h3>Residential Construction</h3>
-          <p>Custom home building and residential development projects with attention to detail and quality craftsmanship.</p>
+          <h3>{{ $t('services.residential.title') }}</h3>
+          <p>{{ $t('services.residential.description') }}</p>
           <ul class="service-features">
-            <li>Custom Home Design</li>
-            <li>Home Renovations</li>
-            <li>Kitchen & Bathroom Remodeling</li>
-            <li>Additions & Extensions</li>
+            <li>{{ $t('services.residential.features.0') }}</li>
+            <li>{{ $t('services.residential.features.1') }}</li>
+            <li>{{ $t('services.residential.features.2') }}</li>
+            <li>{{ $t('services.residential.features.3') }}</li>
           </ul>
           <div class="service-cta">
-            <NuxtLink to="#contacts" class="btn btn-outline">Learn More</NuxtLink>
+            <NuxtLink to="#contacts" class="btn btn-outline">{{ $t('common.learnMore') }}</NuxtLink>
           </div>
         </div>
         
         <div class="service-card featured">
-          <div class="featured-badge">Most Popular</div>
+          <div class="featured-badge">{{ $t('services.commercial.badge') }}</div>
           <div class="service-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M3 21h18"/>
@@ -40,16 +40,16 @@
               <path d="M5 21V10a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v11"/>
             </svg>
           </div>
-          <h3>Commercial Construction</h3>
-          <p>Large-scale commercial projects including office buildings, retail spaces, and industrial facilities.</p>
+          <h3>{{ $t('services.commercial.title') }}</h3>
+          <p>{{ $t('services.commercial.description') }}</p>
           <ul class="service-features">
-            <li>Office Buildings</li>
-            <li>Retail Spaces</li>
-            <li>Warehouses & Industrial</li>
-            <li>Healthcare Facilities</li>
+            <li>{{ $t('services.commercial.features.0') }}</li>
+            <li>{{ $t('services.commercial.features.1') }}</li>
+            <li>{{ $t('services.commercial.features.2') }}</li>
+            <li>{{ $t('services.commercial.features.3') }}</li>
           </ul>
           <div class="service-cta">
-            <NuxtLink to="#contacts" class="btn btn-primary">Get Started</NuxtLink>
+            <NuxtLink to="#contacts" class="btn btn-primary">{{ $t('common.getStarted') }}</NuxtLink>
           </div>
         </div>
         
@@ -59,16 +59,16 @@
               <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
             </svg>
           </div>
-          <h3>Renovation & Remodeling</h3>
-          <p>Transform existing spaces with our comprehensive renovation and remodeling services.</p>
+          <h3>{{ $t('services.renovation.title') }}</h3>
+          <p>{{ $t('services.renovation.description') }}</p>
           <ul class="service-features">
-            <li>Interior Renovations</li>
-            <li>Exterior Improvements</li>
-            <li>Historic Restorations</li>
-            <li>Energy Efficiency Upgrades</li>
+            <li>{{ $t('services.renovation.features.0') }}</li>
+            <li>{{ $t('services.renovation.features.1') }}</li>
+            <li>{{ $t('services.renovation.features.2') }}</li>
+            <li>{{ $t('services.renovation.features.3') }}</li>
           </ul>
           <div class="service-cta">
-            <NuxtLink to="#contacts" class="btn btn-outline">Learn More</NuxtLink>
+            <NuxtLink to="#contacts" class="btn btn-outline">{{ $t('common.learnMore') }}</NuxtLink>
           </div>
         </div>
         
@@ -80,16 +80,16 @@
               <path d="M12 3v11"/>
             </svg>
           </div>
-          <h3>Project Management</h3>
-          <p>End-to-end project management services ensuring timely delivery and budget compliance.</p>
+          <h3>{{ $t('services.projectManagement.title') }}</h3>
+          <p>{{ $t('services.projectManagement.description') }}</p>
           <ul class="service-features">
-            <li>Timeline Planning</li>
-            <li>Budget Management</li>
-            <li>Quality Control</li>
-            <li>Risk Assessment</li>
+            <li>{{ $t('services.projectManagement.features.0') }}</li>
+            <li>{{ $t('services.projectManagement.features.1') }}</li>
+            <li>{{ $t('services.projectManagement.features.2') }}</li>
+            <li>{{ $t('services.projectManagement.features.3') }}</li>
           </ul>
           <div class="service-cta">
-            <NuxtLink to="#contacts" class="btn btn-outline">Learn More</NuxtLink>
+            <NuxtLink to="#contacts" class="btn btn-outline">{{ $t('common.learnMore') }}</NuxtLink>
           </div>
         </div>
         

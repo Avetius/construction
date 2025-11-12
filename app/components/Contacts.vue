@@ -2,9 +2,9 @@
   <section id="contacts" class="contacts-section">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Get In Touch</h2>
+        <h2 class="section-title">{{ $t('contact.title') }}</h2>
         <p class="section-subtitle">
-          Ready to start your construction project? We're here to help bring your vision to life.
+          {{ $t('contact.subtitle') }}
         </p>
       </div>
       <div class="contacts-content">
@@ -15,9 +15,9 @@
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
               </svg>
             </div>
-            <h3>Phone</h3>
-            <p>+1 (555) 123-4567</p>
-            <span class="info-detail">Mon-Fri 8:00 AM - 6:00 PM</span>
+            <h3>{{ $t('contact.info.phone.title') }}</h3>
+            <p>{{ $t('contact.info.phone.number') }}</p>
+            <span class="info-detail">{{ $t('contact.info.phone.hours') }}</span>
           </div>
           <div class="info-card">
             <div class="info-icon">
@@ -26,9 +26,9 @@
                 <polyline points="22,6 12,13 2,6"/>
               </svg>
             </div>
-            <h3>Email</h3>
-            <p>info@construction.com</p>
-            <span class="info-detail">We'll respond within 24 hours</span>
+            <h3>{{ $t('contact.info.email.title') }}</h3>
+            <p>{{ $t('contact.info.email.address') }}</p>
+            <span class="info-detail">{{ $t('contact.info.email.response') }}</span>
           </div>
           
           <div class="info-card">
@@ -38,9 +38,9 @@
                 <circle cx="12" cy="10" r="3"/>
               </svg>
             </div>
-            <h3>Address</h3>
-            <p>123 Construction Ave<br>Building City, BC 12345</p>
-            <span class="info-detail">Visit our main office</span>
+            <h3>{{ $t('contact.info.address.title') }}</h3>
+            <p>{{ $t('contact.info.address.street') }}<br>{{ $t('contact.info.address.city') }}</p>
+            <span class="info-detail">{{ $t('contact.info.address.note') }}</span>
           </div>
           
           <div class="info-card">
@@ -58,58 +58,58 @@
         
         <div class="contact-form-container">
           <div class="form-header">
-            <h3>Send us a Message</h3>
-            <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+            <h3>{{ $t('contact.form.title') }}</h3>
+            <p>{{ $t('contact.form.subtitle') }}</p>
           </div>
           
           <form @submit.prevent="handleSubmit" class="contact-form">
             <div class="form-row">
               <div class="form-group">
-                <label for="firstName">First Name *</label>
+                <label for="firstName">{{ $t('contact.form.firstName') }} *</label>
                 <input
                   id="firstName"
                   v-model="form.firstName"
                   type="text"
                   required
                   class="form-input"
-                  placeholder="Enter your first name"
+                  :placeholder="$t('contact.form.firstNamePlaceholder')"
                 >
               </div>
               
               <div class="form-group">
-                <label for="lastName">Last Name *</label>
+                <label for="lastName">{{ $t('contact.form.lastName') }} *</label>
                 <input
                   id="lastName"
                   v-model="form.lastName"
                   type="text"
                   required
                   class="form-input"
-                  placeholder="Enter your last name"
+                  :placeholder="$t('contact.form.lastNamePlaceholder')"
                 >
               </div>
             </div>
             
             <div class="form-row">
               <div class="form-group">
-                <label for="email">Email Address *</label>
+                <label for="email">{{ $t('contact.form.email') }} *</label>
                 <input
                   id="email"
                   v-model="form.email"
                   type="email"
                   required
                   class="form-input"
-                  placeholder="Enter your email"
+                  :placeholder="$t('contact.form.emailPlaceholder')"
                 >
               </div>
               
               <div class="form-group">
-                <label for="phone">Phone Number</label>
+                <label for="phone">{{ $t('contact.form.phone') }}</label>
                 <input
                   id="phone"
                   v-model="form.phone"
                   type="tel"
                   class="form-input"
-                  placeholder="Enter your phone number"
+                  :placeholder="$t('contact.form.phonePlaceholder')"
                 >
               </div>
             </div>
@@ -141,24 +141,24 @@
             </div>
             
             <div class="form-group">
-              <label for="message">Message *</label>
+              <label for="message">{{ $t('contact.form.message') }} *</label>
               <textarea
                 id="message"
                 v-model="form.message"
                 required
                 rows="5"
                 class="form-input"
-                placeholder="Tell us about your project..."
+                :placeholder="$t('contact.form.messagePlaceholder')"
               ></textarea>
             </div>
             
             <button type="submit" class="submit-btn" :disabled="isSubmitting">
-              <span v-if="isSubmitting">Sending...</span>
-              <span v-else>Send Message</span>
+              <span v-if="isSubmitting">{{ $t('contact.form.sending') }}</span>
+              <span v-else>{{ $t('contact.form.submit') }}</span>
             </button>
             
             <p class="form-note">
-              * Required fields. We respect your privacy and will never share your information.
+              {{ $t('contact.form.privacyNote') }}
             </p>
           </form>
         </div>
@@ -192,7 +192,7 @@ const handleSubmit = async () => {
 
     // Reset form after successful submission
     Object.keys(form).forEach(key => {
-      form[key] = ''
+      form[key as keyof typeof form] = ''
     })
 
     // TODO: Show success message to user

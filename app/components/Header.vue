@@ -12,18 +12,20 @@
           
           <!-- Desktop Navigation -->
           <ul class="nav-menu" :class="{ 'nav-menu-open': isMenuOpen }">
-            <li><NuxtLink to="#hero" @click="closeMenu">Home</NuxtLink></li>
-            <li><NuxtLink to="#about" @click="closeMenu">About</NuxtLink></li>
-            <li><NuxtLink to="#services" @click="closeMenu">Services</NuxtLink></li>
-            <li><NuxtLink to="#contacts" @click="closeMenu">Contact</NuxtLink></li>
+            <li><NuxtLink to="#hero" @click="closeMenu">{{ $t('nav.home') }}</NuxtLink></li>
+            <li><NuxtLink to="#about" @click="closeMenu">{{ $t('nav.about') }}</NuxtLink></li>
+            <li><NuxtLink to="#services" @click="closeMenu">{{ $t('nav.services') }}</NuxtLink></li>
+            <li><NuxtLink to="#contacts" @click="closeMenu">{{ $t('nav.contact') }}</NuxtLink></li>
           </ul>
-          
-          <!-- Auth Buttons -->
-          <div class="auth-buttons" :class="{ 'auth-buttons-open': isMenuOpen }">
-            <NuxtLink to="/login" class="btn btn-outline" @click="closeMenu">Login</NuxtLink>
-            <NuxtLink to="/register" class="btn btn-primary" @click="closeMenu">Get Started</NuxtLink>
+          <!-- Language Switcher & Auth Buttons -->
+          <div class="nav-actions">
+            <LanguageSwitcher />
+            <div class="auth-buttons" :class="{ 'auth-buttons-open': isMenuOpen }">
+              <NuxtLink to="/login" class="btn btn-outline" @click="closeMenu">{{ $t('nav.login') }}</NuxtLink>
+              <NuxtLink to="/register" class="btn btn-primary" @click="closeMenu">{{ $t('nav.getStarted') }}</NuxtLink>
+            </div>
           </div>
-          
+
           <!-- Mobile Menu Toggle -->
           <button 
             class="mobile-menu-toggle"
@@ -124,6 +126,12 @@ onMounted(() => {
 .auth-buttons {
   display: flex;
   gap: 1rem;
+  align-items: center;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 1.5rem;
   align-items: center;
 }
 
