@@ -152,7 +152,7 @@ const handleNewsletterSubmit = async () => {
 
 <style scoped>
 .footer {
-  background-color: #1f2937;
+  background-color: #1a1a1a;
   color: white;
   padding: 3rem 0 0 0;
 }
@@ -175,7 +175,7 @@ const handleNewsletterSubmit = async () => {
 .footer-logo h3 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #3b82f6;
+  color: #fbbf24;
   margin-bottom: 1rem;
 }
 
@@ -193,7 +193,8 @@ const handleNewsletterSubmit = async () => {
 .social-link {
   width: 2.5rem;
   height: 2.5rem;
-  background-color: #374151;
+  background-color: transparent;
+  border: 2px solid #374151;
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
@@ -203,8 +204,9 @@ const handleNewsletterSubmit = async () => {
 }
 
 .social-link:hover {
-  background-color: #3b82f6;
-  color: white;
+  background-color: transparent;
+  border-color: #fbbf24;
+  color: #fbbf24;
   transform: translateY(-2px);
 }
 
@@ -231,7 +233,7 @@ const handleNewsletterSubmit = async () => {
 }
 
 .footer-links a:hover {
-  color: #3b82f6;
+  color: #fbbf24;
 }
 
 .contact-info {
@@ -249,7 +251,7 @@ const handleNewsletterSubmit = async () => {
 .contact-item svg {
   width: 1.25rem;
   height: 1.25rem;
-  color: #3b82f6;
+  color: #fbbf24;
   margin-top: 0.125rem;
   flex-shrink: 0;
 }
@@ -303,8 +305,8 @@ const handleNewsletterSubmit = async () => {
 
 .newsletter-input:focus {
   outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  border-color: #fbbf24;
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.1);
 }
 
 .newsletter-input::placeholder {
@@ -312,8 +314,8 @@ const handleNewsletterSubmit = async () => {
 }
 
 .newsletter-btn {
-  background-color: #3b82f6;
-  color: white;
+  background-color: #fbbf24;
+  color: #1a1a1a;
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 0.5rem;
@@ -324,7 +326,7 @@ const handleNewsletterSubmit = async () => {
 }
 
 .newsletter-btn:hover:not(:disabled) {
-  background-color: #2563eb;
+  background-color: #f59e0b;
 }
 
 .newsletter-btn:disabled {

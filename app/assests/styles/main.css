@@ -13,8 +13,8 @@ html {
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   line-height: 1.6;
-  color: #1f2937;
-  background-color: #f9fafb;
+  color: #1a1a1a;
+  background-color: #fafafa;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -64,25 +64,25 @@ p {
 
 /* ===== LINKS ===== */
 a {
-  color: #3b82f6;
+  color: #fbbf24;
   text-decoration: none;
   transition: all 0.2s ease;
   cursor: pointer;
 }
 
 a:hover {
-  color: #1d4ed8;
+  color: #f59e0b;
   text-decoration: underline;
 }
 
 a:focus {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid #fbbf24;
   outline-offset: 2px;
   border-radius: 0.25rem;
 }
 
 a:active {
-  color: #1e40af;
+  color: #d97706;
 }
 
 /* ===== LISTS ===== */
@@ -157,8 +157,8 @@ input:focus,
 textarea:focus,
 select:focus {
   outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
 }
 
 input:disabled,
@@ -190,12 +190,12 @@ button {
   cursor: pointer;
   transition: all 0.2s ease;
   text-decoration: none;
-  background-color: #3b82f6;
+  background-color: #f97316;
   color: white;
 }
 
 button:hover:not(:disabled) {
-  background-color: #2563eb;
+  background-color: #ea580c;
   transform: translateY(-1px);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
@@ -213,28 +213,28 @@ button:disabled {
 }
 
 button:focus {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid #f97316;
   outline-offset: 2px;
 }
 
 /* Button variants */
 .btn-secondary {
-  background-color: #6b7280;
+  background-color: #1a1a1a;
   color: white;
 }
 
 .btn-secondary:hover:not(:disabled) {
-  background-color: #4b5563;
+  background-color: #000000;
 }
 
 .btn-outline {
   background-color: transparent;
-  color: #3b82f6;
-  border: 1px solid #3b82f6;
+  color: #f97316;
+  border: 1px solid #f97316;
 }
 
 .btn-outline:hover:not(:disabled) {
-  background-color: #3b82f6;
+  background-color: #f97316;
   color: white;
 }
 
@@ -300,12 +300,12 @@ img {
 
 /* ===== BLOCKQUOTES ===== */
 blockquote {
-  border-left: 4px solid #3b82f6;
+  border-left: 4px solid #f97316;
   padding-left: 1rem;
   margin: 1.5rem 0;
   font-style: italic;
   color: #6b7280;
-  background-color: #f8fafc;
+  background-color: #fef3c7;
   padding: 1rem 1rem 1rem 2rem;
   border-radius: 0 0.5rem 0.5rem 0;
 }
@@ -367,7 +367,7 @@ pre code {
 }
 
 .text-primary {
-  color: #3b82f6;
+  color: #f97316;
 }
 
 .text-danger {
@@ -469,7 +469,7 @@ pre code {
 
 /* Focus styles for keyboard navigation */
 *:focus {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid #f97316;
   outline-offset: 2px;
 }
 
@@ -478,7 +478,7 @@ pre code {
   position: absolute;
   top: -40px;
   left: 6px;
-  background: #3b82f6;
+  background: #f97316;
   color: white;
   padding: 8px;
   border-radius: 4px;

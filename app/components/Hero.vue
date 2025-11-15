@@ -56,8 +56,8 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: #ffffff;
+  color: #1a1a1a;
   padding-top: 5rem; /* Account for fixed header */
 }
 
@@ -77,7 +77,7 @@
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 1rem;
-  background: linear-gradient(45deg, #ffffff, #e0e7ff);
+  background: linear-gradient(45deg, #1a1a1a, #000000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -87,14 +87,14 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
-  opacity: 0.9;
+  color: #fbbf24;
 }
 
 .hero-description {
   font-size: 1.125rem;
   line-height: 1.7;
   margin-bottom: 2.5rem;
-  opacity: 0.8;
+  color: #1a1a1a;
 }
 
 .hero-actions {
@@ -122,29 +122,29 @@
 }
 
 .btn-primary {
-  background-color: #3b82f6;
-  color: white;
-  border-color: #3b82f6;
+  background-color: #1a1a1a;
+  color: #fbbf24;
+  border-color: #1a1a1a;
 }
 
 .btn-primary:hover {
-  background-color: #2563eb;
-  border-color: #2563eb;
+  background-color: #000000;
+  border-color: #000000;
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: white;
-  border-color: white;
+  color: #1a1a1a;
+  border-color: #1a1a1a;
 }
 
 .btn-secondary:hover {
-  background-color: white;
-  color: #667eea;
+  background-color: #1a1a1a;
+  color: #fbbf24;
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .hero-stats {
@@ -167,7 +167,7 @@
 .stat-label {
   display: block;
   font-size: 0.875rem;
-  opacity: 0.8;
+  color: #1a1a1a;
   margin-top: 0.25rem;
 }
 
@@ -180,19 +180,19 @@
 .image-placeholder {
   width: 400px;
   height: 400px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .construction-icon {
   width: 200px;
   height: 200px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive Design */

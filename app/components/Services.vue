@@ -214,12 +214,12 @@
 .service-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
-  border-color: #3b82f6;
+  border-color: #fbbf24;
 }
 
 .service-card.featured {
-  border-color: #3b82f6;
-  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border-color: #fbbf24;
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
 }
 
 /* === SERVICE ELEMENTS === */
@@ -227,8 +227,8 @@
   position: absolute;
   top: -0.5rem;
   right: 1rem;
-  background: #3b82f6;
-  color: white;
+  background: #fbbf24;
+  color: #1a1a1a;
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
   font-size: 0.75rem;
@@ -238,7 +238,8 @@
 .service-icon {
   width: 4rem;
   height: 4rem;
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  background: transparent;
+  border: 2px solid #fbbf24;
   border-radius: 1rem;
   display: flex;
   align-items: center;
@@ -249,7 +250,7 @@
 .service-icon svg {
   width: 2rem;
   height: 2rem;
-  color: white;
+  color: #fbbf24;
 }
 
 .service-features {
@@ -293,15 +294,16 @@
 }
 
 .btn-primary {
-  background-color: #3b82f6;
-  color: white;
-  border-color: #3b82f6;
+  background-color: transparent;
+  color: #fbbf24;
+  border: 2px solid #fbbf24;
+  border-color: #fbbf24;
 }
 
 .btn-outline {
   background-color: transparent;
-  color: #3b82f6;
-  border-color: #3b82f6;
+  color: #fbbf24;
+  border-color: #fbbf24;
 }
 
 .btn-large {
@@ -316,18 +318,18 @@
 }
 
 .btn-primary:hover {
-  background-color: #2563eb;
-  border-color: #2563eb;
+  background-color: #fbbf24;
+  color: #1a1a1a;
 }
 
 .btn-outline:hover {
-  background-color: #3b82f6;
-  color: white;
+  background-color: #fbbf24;
+  color: #1a1a1a;
 }
 
 /* === CTA SECTION === */
 .services-cta {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
   border-radius: 1rem;
   padding: 3rem;
   text-align: center;

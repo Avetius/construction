@@ -99,7 +99,7 @@ onMounted(() => {
 .logo h1 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #3b82f6;
+  color: #fbbf24;
   margin: 0;
 }
 
@@ -120,7 +120,7 @@ onMounted(() => {
 }
 
 .nav-menu li a:hover {
-  color: #3b82f6;
+  color: #fbbf24;
 }
 
 .auth-buttons {
@@ -145,22 +145,22 @@ onMounted(() => {
 }
 
 .btn-outline {
-  color: #3b82f6;
-  border-color: #3b82f6;
+  color: #fbbf24;
+  border-color: #fbbf24;
 }
 
 .btn-outline:hover {
-  background-color: #3b82f6;
-  color: white;
+  background-color: #fbbf24;
+  color: #1a1a1a;
 }
 
 .btn-primary {
-  background-color: #3b82f6;
-  color: white;
+  background-color: #fbbf24;
+  color: #1a1a1a;
 }
 
 .btn-primary:hover {
-  background-color: #2563eb;
+  background-color: #f59e0b;
 }
 
 .mobile-menu-toggle {

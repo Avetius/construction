@@ -261,7 +261,8 @@ const handleSubmit = async () => {
 .info-icon {
   width: 3rem;
   height: 3rem;
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  background: transparent;
+  border: 2px solid #fbbf24;
   border-radius: 0.75rem;
   display: flex;
   align-items: center;
@@ -272,7 +273,7 @@ const handleSubmit = async () => {
 .info-icon svg {
   width: 1.5rem;
   height: 1.5rem;
-  color: white;
+  color: #fbbf24;
 }
 
 .info-card h3 {
@@ -362,8 +363,8 @@ textarea.form-input {
 
 .submit-btn {
   width: 100%;
-  background-color: #3b82f6;
-  color: white;
+  background-color: #fbbf24;
+  color: #1a1a1a;
   padding: 0.875rem 1.5rem;
   border: none;
   border-radius: 0.5rem;
@@ -374,7 +375,7 @@ textarea.form-input {
 }
 
 .submit-btn:hover:not(:disabled) {
-  background-color: #2563eb;
+  background-color: #f59e0b;
   transform: translateY(-1px);
 }
 

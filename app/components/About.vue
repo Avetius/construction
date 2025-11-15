@@ -186,7 +186,7 @@
 }
 
 .values-list strong {
-  color: #3b82f6;
+  color: #fbbf24;
   font-weight: 600;
 }
 
@@ -212,18 +212,19 @@
 .feature-icon {
   width: 3rem;
   height: 3rem;
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  background: transparent;
+  border: 2px solid #fbbf24;
   border-radius: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .feature-icon svg {
   width: 1.5rem;
   height: 1.5rem;
-  color: white;
+  color: #fbbf24;
 }
 
 .feature-card h4 {
@@ -240,7 +241,7 @@
 }
 
 .about-cta {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
   border-radius: 1rem;
   padding: 3rem;
   text-align: center;
@@ -279,26 +280,26 @@
 }
 
 .btn-primary {
-  background-color: #3b82f6;
-  color: white;
-  border-color: #3b82f6;
+  background-color: #fbbf24;
+  color: #1a1a1a;
+  border-color: #fbbf24;
 }
 
 .btn-primary:hover {
-  background-color: #2563eb;
-  border-color: #2563eb;
+  background-color: #f59e0b;
+  border-color: #f59e0b;
   transform: translateY(-2px);
 }
 
 .btn-outline {
   background-color: transparent;
-  color: white;
-  border-color: white;
+  color: #fbbf24;
+  border-color: #fbbf24;
 }
 
 .btn-outline:hover {
-  background-color: white;
-  color: #667eea;
+  background-color: #fbbf24;
+  color: #1a1a1a;
   transform: translateY(-2px);
 }
 

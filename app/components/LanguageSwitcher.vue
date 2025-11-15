@@ -50,8 +50,8 @@ const switchLanguage = async () => {
 
 .language-select:focus {
   outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+  border-color: #fbbf24;
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.5);
 }
 
 @media (max-width: 768px) {
