@@ -15,14 +15,7 @@ services:
       - NUXT_HOST=${NUXT_HOST:-0.0.0.0}
       - NUXT_DB_PATH=/tmp/construction.db
       - NUXT_PUBLIC_API_BASE=/api
-<<<<<<< HEAD
-      - NUXT_JWT_SECRET=${JWT_SECRET:-default-jwt-secret}
-      - NUXT_SESSION_SECRET=${SESSION_SECRET:-default-session-secret}
-      - NUXT_ADMIN_EMAIL=${ADMIN_EMAIL:-admin@construction.com}
-      - NUXT_ADMIN_PASSWORD=${ADMIN_PASSWORD:-admin123}
-=======
       - NUXT_PUBLIC_GOOGLE_CLIENT_ID=${NUXT_PUBLIC_GOOGLE_CLIENT_ID}
->>>>>>> 3a8b04ea56293bd853f4ff7582a8ac1de82fa6e9
     volumes:
       # Mount SQLite database directory
       - sqlite_data:/app/data

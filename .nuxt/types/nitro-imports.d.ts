@@ -180,8 +180,4 @@ export { defineI18nLocale, defineI18nConfig } from '/home/sirius/Documents/WEB/c
 export { defineI18nLocaleDetector } from '/home/sirius/Documents/WEB/construction/node_modules/@nuxtjs/i18n/dist/runtime/composables/server';
 export { useTranslation } from '@intlify/h3';
 export { getCookieLocale, getHeaderLanguage, getHeaderLanguages, getHeaderLocale, getHeaderLocales, getPathLocale, getQueryLocale, setCookieLocale, tryCookieLocale, tryHeaderLocale, tryHeaderLocales, tryPathLocale, tryQueryLocale } from '@intlify/utils/h3';
-<<<<<<< HEAD
-export { DatabaseManager, getDatabase } from '/mnt/c/Users/avets/Documents/construction/server/utils/database';
-=======
 export { DatabaseManager, db } from '/home/sirius/Documents/WEB/construction/server/utils/database';
->>>>>>> 3a8b04ea56293bd853f4ff7582a8ac1de82fa6e9

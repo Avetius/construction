@@ -16,17 +16,6 @@ import { RuntimeConfig as UserRuntimeConfig, PublicRuntimeConfig as UserPublicRu
 
    dbPath: string,
 
-<<<<<<< HEAD
-   port: string,
-
-   host: string,
-
-   adminEmail: string,
-
-   adminPassword: string,
-
-=======
->>>>>>> 3a8b04ea56293bd853f4ff7582a8ac1de82fa6e9
    nitro: {
       envPrefix: string,
    },

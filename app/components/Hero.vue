@@ -88,12 +88,7 @@ onBeforeUnmount(() => {
   min-height: 100vh;
   display: flex;
   align-items: center;
-<<<<<<< HEAD
-  background: #ffffff;
-  color: #1a1a1a;
-=======
   color: white;
->>>>>>> 3a8b04ea56293bd853f4ff7582a8ac1de82fa6e9
   padding-top: 5rem; /* Account for fixed header */
   overflow: hidden;
 }

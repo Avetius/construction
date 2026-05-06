@@ -110,16 +110,10 @@
         <div class="footer-bottom-content">
           <p>{{ $t('footer.copyright') }}</p>
           <div class="footer-legal">
-<<<<<<< HEAD
-            <a href="/privacy">{{ $t('footer.privacy') }}</a>
-            <a href="/terms">{{ $t('footer.terms') }}</a>
-            <a href="/cookies">{{ $t('footer.cookies') }}</a>
-=======
             <a href="/privacy">Privacy Policy</a>
             <a href="/terms">Terms of Service</a>
             <a href="/cookies">Cookie Policy</a>
             <a href="#" @click.prevent="openPreferences">Your Privacy Choices (CCPA)</a>
->>>>>>> 3a8b04ea56293bd853f4ff7582a8ac1de82fa6e9
           </div>
         </div>
       </div>
