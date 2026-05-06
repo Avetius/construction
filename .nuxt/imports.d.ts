@@ -29,6 +29,8 @@ export { requestIdleCallback, cancelIdleCallback } from '#app/compat/idle-callba
 export { useRouteBaseName, useLocalePath, useLocaleRoute, useSwitchLocalePath, useLocaleHead, useBrowserLocale, useCookieLocale, useSetI18nParams, useI18nPreloadKeys, defineI18nRoute, defineI18nLocale, defineI18nConfig } from '../node_modules/@nuxtjs/i18n/dist/runtime/composables/index';
 export { definePageMeta } from '../node_modules/nuxt/dist/pages/runtime/composables';
 export { defineLazyHydrationComponent } from '#app/composables/lazy-hydration';
+export { useCookieConsent, CookiePreferences } from '../app/composables/useCookieConsent';
+export { useGoogleOneTap } from '../app/composables/useGoogleOneTap';
 export { defineLocale, extendLocale } from '../node_modules/@nuxt/ui/dist/runtime/composables/defineLocale';
 export { extractShortcuts, defineShortcuts } from '../node_modules/@nuxt/ui/dist/runtime/composables/defineShortcuts';
 export { avatarGroupInjectionKey, useAvatarGroup } from '../node_modules/@nuxt/ui/dist/runtime/composables/useAvatarGroup';

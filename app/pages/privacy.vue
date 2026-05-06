@@ -26,6 +26,7 @@
               <li><a href="#data-security">Data Security</a></li>
               <li><a href="#data-retention">Data Retention</a></li>
               <li><a href="#your-rights">Your Rights and Choices</a></li>
+              <li><a href="#ccpa-rights">California Privacy Rights (CCPA/CPRA)</a></li>
               <li><a href="#cookies">Cookies and Tracking Technologies</a></li>
               <li><a href="#third-party">Third-Party Services</a></li>
               <li><a href="#children">Children's Privacy</a></li>
@@ -184,8 +185,36 @@
             <p>To exercise these rights, please contact us using the information provided at the end of this policy.</p>
           </section>
 
+          <section id="ccpa-rights" class="legal-section">
+            <h2>7. California Privacy Rights (CCPA/CPRA)</h2>
+            <p>
+              If you are a California resident, you may have additional rights under the California Consumer Privacy Act (CCPA)
+              and California Privacy Rights Act (CPRA).
+            </p>
+
+            <h3>Your California Rights</h3>
+            <ul>
+              <li><strong>Right to Know:</strong> Request categories and specific pieces of personal information we collect, use, and disclose.</li>
+              <li><strong>Right to Delete:</strong> Request deletion of personal information, subject to legal exceptions.</li>
+              <li><strong>Right to Correct:</strong> Request correction of inaccurate personal information.</li>
+              <li><strong>Right to Opt Out:</strong> Opt out of the sale or sharing of personal information.</li>
+              <li><strong>Right to Limit:</strong> Limit use and disclosure of sensitive personal information where applicable.</li>
+              <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your privacy rights.</li>
+            </ul>
+
+            <h3>Do Not Sell or Share My Personal Information</h3>
+            <p>
+              You can submit this request at any time through our privacy controls. We also honor supported browser-based
+              Global Privacy Control (GPC) opt-out signals.
+            </p>
+
+            <button class="ccpa-btn" @click="openPrivacyChoices">
+              Your Privacy Choices (CCPA)
+            </button>
+          </section>
+
           <section id="cookies" class="legal-section">
-            <h2>7. Cookies and Tracking Technologies</h2>
+            <h2>8. Cookies and Tracking Technologies</h2>
             <p>We use cookies and similar technologies to enhance your website experience. For detailed information about our cookie practices, please see our <NuxtLink to="/cookies">Cookie Policy</NuxtLink>.</p>
 
             <h3>Types of Cookies We Use</h3>
@@ -198,7 +227,7 @@
           </section>
 
           <section id="third-party" class="legal-section">
-            <h2>8. Third-Party Services</h2>
+            <h2>9. Third-Party Services</h2>
             <p>Our website may contain links to third-party websites or integrate with third-party services:</p>
 
             <h3>Third-Party Links</h3>
@@ -218,14 +247,14 @@
           </section>
 
           <section id="children" class="legal-section">
-            <h2>9. Children's Privacy</h2>
+            <h2>10. Children's Privacy</h2>
             <p>Our services are not directed to children under the age of 13 (or 16 in the EU). We do not knowingly collect personal information from children. If we become aware that we have collected information from a child, we will take steps to delete such information promptly.</p>
 
             <p>If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately.</p>
           </section>
 
           <section id="international" class="legal-section">
-            <h2>10. International Data Transfers</h2>
+            <h2>11. International Data Transfers</h2>
             <p>Your information may be transferred to and processed in countries other than your country of residence. We ensure appropriate safeguards are in place:</p>
 
             <ul>
@@ -239,7 +268,7 @@
           </section>
 
           <section id="changes" class="legal-section">
-            <h2>11. Changes to This Privacy Policy</h2>
+            <h2>12. Changes to This Privacy Policy</h2>
             <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. We will:</p>
 
             <ul>
@@ -253,7 +282,7 @@
           </section>
 
           <section id="contact" class="legal-section">
-            <h2>12. Contact Information</h2>
+            <h2>13. Contact Information</h2>
             <p>If you have questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
 
             <div class="contact-details">
@@ -308,6 +337,11 @@ useSeoMeta({
   ogType: 'website',
   twitterCard: 'summary',
 })
+const { openPreferences } = useCookieConsent()
+
+const openPrivacyChoices = () => {
+  openPreferences()
+}
 
 // Smooth scrolling for anchor links
 onMounted(() => {
@@ -539,6 +573,21 @@ onMounted(() => {
 
 .contact-method a:hover {
   text-decoration: underline;
+}
+.ccpa-btn {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ccpa-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.35);
 }
 
 /* Responsive Design */

@@ -1,11 +1,20 @@
+/// <reference types="@nuxt/image" />
 /// <reference types="@nuxt/test-utils" />
 /// <reference types="@nuxt/scripts" />
 /// <reference types="@nuxt/eslint" />
+<<<<<<< HEAD
 /// <reference types="@nuxt/image" />
 /// <reference types="@nuxtjs/i18n" />
 /// <reference types="@nuxt/content" />
 /// <reference types="@nuxt/ui" />
 /// <reference types="@nuxt/devtools" />
+=======
+/// <reference types="@nuxt/scripts" />
+/// <reference types="@nuxt/content" />
+/// <reference types="@nuxt/ui" />
+/// <reference types="@nuxt/devtools" />
+/// <reference types="@nuxtjs/i18n" />
+>>>>>>> 3a8b04ea56293bd853f4ff7582a8ac1de82fa6e9
 /// <reference types="@nuxt/telemetry" />
 /// <reference path="types/builder-env.d.ts" />
 /// <reference path="types/plugins.d.ts" />
@@ -13,7 +22,7 @@
 /// <reference path="types/app.config.d.ts" />
 /// <reference path="types/runtime-config.d.ts" />
 /// <reference types="nuxt/app" />
-/// <reference types="/mnt/c/Users/avets/Documents/construction/node_modules/@nuxt/nitro-server/dist/index.mjs" />
+/// <reference types="/home/sirius/Documents/WEB/construction/node_modules/@nuxt/nitro-server/dist/index.mjs" />
 /// <reference path="image/providers.d.ts" />
 /// <reference types="vitest/import-meta" />
 /// <reference path="content/types.d.ts" />

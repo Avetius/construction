@@ -20,6 +20,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ===== LIGHT GLOBAL SPACING (<= 5px) ===== */
+main,
+section,
+article {
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.container {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.spacer-xs {
+  margin: 2px;
+  padding: 2px;
+}
+
 /* ===== TYPOGRAPHY ===== */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;

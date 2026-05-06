@@ -42,7 +42,8 @@ export default defineNuxtConfig({
     
     // Public keys (exposed to client-side)
     public: {
-      apiBase: '/api'
+      apiBase: '/api',
+      googleClientId: ''
     }
   },
 

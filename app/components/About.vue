@@ -7,7 +7,7 @@
           {{ $t('about.subtitle') }}
         </p>
       </div>
-      
+
       <div class="about-content">
         <div class="about-text">
           <div class="about-intro">
@@ -16,14 +16,14 @@
               {{ $t('about.whoWeAre.description') }}
             </p>
           </div>
-          
+
           <div class="about-mission">
             <h3>{{ $t('about.mission.title') }}</h3>
             <p>
               {{ $t('about.mission.description') }}
             </p>
           </div>
-          
+
           <div class="about-values">
             <h3>{{ $t('about.values.title') }}</h3>
             <ul class="values-list">

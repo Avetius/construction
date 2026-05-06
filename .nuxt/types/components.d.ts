@@ -24,6 +24,7 @@ interface _GlobalComponents {
   'Contacts': typeof import("../../app/components/Contacts.vue")['default']
   'ContentEditor': typeof import("../../app/components/ContentEditor.vue")['default']
   'ContentGuide': typeof import("../../app/components/ContentGuide.vue")['default']
+  'CookieConsentCenter': typeof import("../../app/components/CookieConsentCenter.vue")['default']
   'Footer': typeof import("../../app/components/Footer.vue")['default']
   'Header': typeof import("../../app/components/Header.vue")['default']
   'Hero': typeof import("../../app/components/Hero.vue")['default']
@@ -448,6 +449,7 @@ interface _GlobalComponents {
   'LazyContacts': LazyComponent<typeof import("../../app/components/Contacts.vue")['default']>
   'LazyContentEditor': LazyComponent<typeof import("../../app/components/ContentEditor.vue")['default']>
   'LazyContentGuide': LazyComponent<typeof import("../../app/components/ContentGuide.vue")['default']>
+  'LazyCookieConsentCenter': LazyComponent<typeof import("../../app/components/CookieConsentCenter.vue")['default']>
   'LazyFooter': LazyComponent<typeof import("../../app/components/Footer.vue")['default']>
   'LazyHeader': LazyComponent<typeof import("../../app/components/Header.vue")['default']>
   'LazyHero': LazyComponent<typeof import("../../app/components/Hero.vue")['default']>

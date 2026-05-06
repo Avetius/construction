@@ -28,6 +28,7 @@
               <li><a href="#marketing-cookies">Marketing Cookies</a></li>
               <li><a href="#third-party-cookies">Third-Party Cookies</a></li>
               <li><a href="#cookie-consent">Cookie Consent</a></li>
+              <li><a href="#ccpa-controls">CCPA Do Not Sell or Share Controls</a></li>
               <li><a href="#manage-cookies">How to Manage Cookies</a></li>
               <li><a href="#browser-settings">Browser Settings</a></li>
               <li><a href="#mobile-settings">Mobile Device Settings</a></li>
@@ -442,8 +443,30 @@
             </div>
           </section>
 
+          <section id="ccpa-controls" class="legal-section">
+            <h2>9. CCPA Do Not Sell or Share Controls</h2>
+            <p>
+              California residents may direct us not to sell or share personal information for cross-context behavioral advertising.
+              We provide a dedicated opt-out control through our cookie preference center.
+            </p>
+
+            <h3>How to Opt Out</h3>
+            <ul>
+              <li>Select <strong>Do Not Sell or Share (CCPA/CPRA)</strong> in our privacy preferences.</li>
+              <li>Use the <strong>Your Privacy Choices (CCPA)</strong> link in the footer at any time.</li>
+              <li>Enable browser Global Privacy Control (GPC) where supported.</li>
+            </ul>
+
+            <h3>What Changes When You Opt Out</h3>
+            <ul>
+              <li>Marketing and advertising cookies are disabled.</li>
+              <li>Known marketing and analytics cookies are cleared from your browser where possible.</li>
+              <li>Your choice is stored and honored for future visits on this device/browser.</li>
+            </ul>
+          </section>
+
           <section id="manage-cookies" class="legal-section">
-            <h2>9. How to Manage Cookies</h2>
+            <h2>10. How to Manage Cookies</h2>
             <p>
               You have several options for managing cookies on your device. You can control cookies 
               through our website settings or through your browser settings.
@@ -477,7 +500,7 @@
           </section>
 
           <section id="browser-settings" class="legal-section">
-            <h2>10. Browser Settings</h2>
+            <h2>11. Browser Settings</h2>
             <p>Here's how to manage cookies in popular web browsers:</p>
 
             <div class="browser-guides">
@@ -532,7 +555,7 @@
           </section>
 
           <section id="mobile-settings" class="legal-section">
-            <h2>11. Mobile Device Settings</h2>
+            <h2>12. Mobile Device Settings</h2>
             <p>Mobile devices also provide controls for managing cookies and tracking:</p>
 
             <div class="mobile-guides">
@@ -570,7 +593,7 @@
           </section>
 
           <section id="changes" class="legal-section">
-            <h2>12. Changes to This Policy</h2>
+            <h2>13. Changes to This Policy</h2>
             <p>
               We may update this Cookie Policy from time to time to reflect changes in our practices, 
               technology, or applicable laws.
@@ -599,7 +622,7 @@
           </section>
 
           <section id="contact" class="legal-section">
-            <h2>13. Contact Information</h2>
+            <h2>14. Contact Information</h2>
             <p>
               If you have questions about this Cookie Policy or our use of cookies, 
               please contact us:
@@ -672,9 +695,10 @@ useSeoMeta({
 })
 
 // Methods
+const { openPreferences } = useCookieConsent()
+
 const openCookieSettings = () => {
-  // TODO: Implement cookie preference center
-  alert('Cookie preference center would open here. This would typically integrate with a cookie consent management platform.')
+  openPreferences()
 }
 
 // Smooth scrolling for anchor links
