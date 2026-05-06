@@ -1,4 +1,4 @@
-import { db } from '../../utils/database'
+import { getDatabase } from '../../utils/database'
 
 type GoogleTokenInfo = {
   aud: string
@@ -47,6 +47,8 @@ export default defineEventHandler(async (event) => {
   if (!tokenInfo.email || tokenInfo.email_verified !== 'true') {
     throw createError({ statusCode: 401, statusMessage: 'Google account email is not verified' })
   }
+
+  const db = await getDatabase()
 
   const existingUser = db
     .prepare('SELECT id, email, first_name, last_name, role FROM users WHERE email = ?')

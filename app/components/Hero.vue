@@ -206,13 +206,8 @@ onBeforeUnmount(() => {
 }
 
 .btn-secondary:hover {
-<<<<<<< HEAD
   background-color: #1a1a1a;
   color: #fbbf24;
-=======
-  background-color: white;
-  color: #111827;
->>>>>>> 3a8b04ea56293bd853f4ff7582a8ac1de82fa6e9
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
@@ -259,18 +254,10 @@ onBeforeUnmount(() => {
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-<<<<<<< HEAD
 .construction-icon {
   width: 200px;
   height: 200px;
   color: rgba(0, 0, 0, 0.3);
-=======
-.construction-logo {
-  width: 245px;
-  height: 245px;
-  object-fit: contain;
-  filter: drop-shadow(0 12px 26px rgba(0, 0, 0, 0.45));
->>>>>>> 3a8b04ea56293bd853f4ff7582a8ac1de82fa6e9
 }
 
 /* Responsive Design */

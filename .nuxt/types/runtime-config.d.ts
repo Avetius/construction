@@ -62,7 +62,7 @@ import { RuntimeConfig as UserRuntimeConfig, PublicRuntimeConfig as UserPublicRu
    googleClientId: string,
 
    "nuxt-scripts": {
-      version: any,
+      version: string,
 
       defaultScriptOptions: {
          trigger: string,
