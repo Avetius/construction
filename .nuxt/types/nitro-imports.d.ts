@@ -20,7 +20,6 @@ declare global {
   const createEvent: typeof import('../../node_modules/h3').createEvent
   const createEventStream: typeof import('../../node_modules/h3').createEventStream
   const createRouter: typeof import('../../node_modules/h3').createRouter
-  const db: typeof import('../../server/utils/database').db
   const defaultContentType: typeof import('../../node_modules/h3').defaultContentType
   const defineAppConfig: typeof import('../../node_modules/@nuxt/nitro-server/dist/runtime/utils/config').defineAppConfig
   const defineCachedEventHandler: typeof import('../../node_modules/nitropack/dist/runtime/internal/cache').defineCachedEventHandler
@@ -180,4 +179,4 @@ export { defineI18nLocale, defineI18nConfig } from '/home/sirius/Documents/WEB/c
 export { defineI18nLocaleDetector } from '/home/sirius/Documents/WEB/construction/node_modules/@nuxtjs/i18n/dist/runtime/composables/server';
 export { useTranslation } from '@intlify/h3';
 export { getCookieLocale, getHeaderLanguage, getHeaderLanguages, getHeaderLocale, getHeaderLocales, getPathLocale, getQueryLocale, setCookieLocale, tryCookieLocale, tryHeaderLocale, tryHeaderLocales, tryPathLocale, tryQueryLocale } from '@intlify/utils/h3';
-export { DatabaseManager, db } from '/home/sirius/Documents/WEB/construction/server/utils/database';
+export { DatabaseManager, getDatabase } from '/home/sirius/Documents/WEB/construction/server/utils/database';

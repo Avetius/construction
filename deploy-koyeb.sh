@@ -43,10 +43,16 @@ fi
 # Set application name
 APP_NAME="construction-management"
 SERVICE_NAME="construction-app"
+DEPLOY_BRANCH="${KOYEB_GIT_BRANCH:-$(git branch --show-current 2>/dev/null)}"
+
+if [ -z "$DEPLOY_BRANCH" ]; then
+    DEPLOY_BRANCH="main"
+fi
 
 echo "📋 Deployment Configuration:"
 echo "   • App Name: $APP_NAME"
 echo "   • Service: $SERVICE_NAME"
+echo "   • Branch: $DEPLOY_BRANCH"
 echo "   • Dockerfile: Dockerfile.koyeb"
 echo "   • Port: 8000"
 echo ""
@@ -59,7 +65,7 @@ if koyeb app get $APP_NAME &> /dev/null; then
     koyeb service update $SERVICE_NAME \
         --app $APP_NAME \
         --git github.com/Avetius/construction \
-        --git-branch docker \
+        --git-branch "$DEPLOY_BRANCH" \
         --git-dockerfile Dockerfile.koyeb \
         --run-command "node .output/server/index.mjs" \
         --ports 8000:http \
@@ -79,7 +85,7 @@ else
     koyeb service create $SERVICE_NAME \
         --app $APP_NAME \
         --git github.com/Avetius/construction \
-        --git-branch docker \
+        --git-branch "$DEPLOY_BRANCH" \
         --git-dockerfile Dockerfile.koyeb \
         --run-command "node .output/server/index.mjs" \
         --ports 8000:http \

@@ -16,6 +16,14 @@ import { RuntimeConfig as UserRuntimeConfig, PublicRuntimeConfig as UserPublicRu
 
    dbPath: string,
 
+   port: string,
+
+   host: string,
+
+   adminEmail: string,
+
+   adminPassword: string,
+
    nitro: {
       envPrefix: string,
    },
@@ -51,13 +59,10 @@ import { RuntimeConfig as UserRuntimeConfig, PublicRuntimeConfig as UserPublicRu
   interface SharedPublicRuntimeConfig {
    apiBase: string,
 
-<<<<<<< HEAD
-=======
    googleClientId: string,
 
->>>>>>> 3a8b04ea56293bd853f4ff7582a8ac1de82fa6e9
    "nuxt-scripts": {
-      version: string,
+      version: any,
 
       defaultScriptOptions: {
          trigger: string,

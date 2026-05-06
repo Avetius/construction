@@ -25,6 +25,7 @@ This guide will walk you through deploying your Construction Management applicat
    - **Instance Type**: `nano` (1 CPU, 512MB RAM)
    - **Port**: `8000`
    - **Dockerfile**: Select `Dockerfile.koyeb`
+   - If Koyeb shows a build step like `Heroku Node.js npm Install`, the service is using buildpacks instead of your Dockerfile. Reconfigure the service to use `Dockerfile.koyeb`.
 
 3. **Environment Variables**
    Configure these in the Koyeb dashboard:
