@@ -24,6 +24,7 @@ export const AdminSidebar: typeof import("../app/components/AdminSidebar.vue")['
 export const Contacts: typeof import("../app/components/Contacts.vue")['default']
 export const ContentEditor: typeof import("../app/components/ContentEditor.vue")['default']
 export const ContentGuide: typeof import("../app/components/ContentGuide.vue")['default']
+export const CookieConsentCenter: typeof import("../app/components/CookieConsentCenter.vue")['default']
 export const Footer: typeof import("../app/components/Footer.vue")['default']
 export const Header: typeof import("../app/components/Header.vue")['default']
 export const Hero: typeof import("../app/components/Hero.vue")['default']
@@ -447,6 +448,7 @@ export const LazyAdminSidebar: LazyComponent<typeof import("../app/components/Ad
 export const LazyContacts: LazyComponent<typeof import("../app/components/Contacts.vue")['default']>
 export const LazyContentEditor: LazyComponent<typeof import("../app/components/ContentEditor.vue")['default']>
 export const LazyContentGuide: LazyComponent<typeof import("../app/components/ContentGuide.vue")['default']>
+export const LazyCookieConsentCenter: LazyComponent<typeof import("../app/components/CookieConsentCenter.vue")['default']>
 export const LazyFooter: LazyComponent<typeof import("../app/components/Footer.vue")['default']>
 export const LazyHeader: LazyComponent<typeof import("../app/components/Header.vue")['default']>
 export const LazyHero: LazyComponent<typeof import("../app/components/Hero.vue")['default']>

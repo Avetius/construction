@@ -167,11 +167,13 @@ NUXT_HOST=0.0.0.0
 JWT_SECRET=your-jwt-secret-key
 SESSION_SECRET=your-session-secret-key
 NUXT_DB_PATH=./data/construction.db
+NUXT_PUBLIC_GOOGLE_CLIENT_ID=your-google-oauth-web-client-id
 ```
 
 ## API Endpoints
 
 - `GET /api/health` - Health check and database initialization
+- `POST /api/auth/google` - Google One Tap token verification and user upsert
 - Admin endpoints for content and project management
 - Media upload and management endpoints
 
@@ -193,3 +195,21 @@ For deployment and configuration questions, refer to:
 - [Docker Setup Guide](./DOCKER.md)
 - [Koyeb Deployment Guide](./KOYEB_DEPLOYMENT.md)
 - [Nuxt Documentation](https://nuxt.com/docs)
+
+
+## To Do
+
+Setup required on your side:
+
+Create a Google OAuth Web Client in Google Cloud Console.
+Set NUXT_PUBLIC_GOOGLE_CLIENT_ID in your environment.
+In Google OAuth client settings, add your site origins to Authorized JavaScript origins, for example localhost and your production domain.
+Notes:
+
+Existing app auth was mostly placeholder, so this implementation handles Google identity verification plus user creation/update, then redirects to home.
+I did not run end-to-end browser testing in this session.
+Next options:
+
+Add server-side session issuance after Google login so users stay authenticated across requests.
+Add route guards for admin pages based on returned user role.
+Add a visible “Continue with Google” fallback button on additional pages if you want One Tap available everywhere.

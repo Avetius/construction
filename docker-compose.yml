@@ -13,6 +13,7 @@ services:
       - NODE_ENV=production
       - NUXT_DB_PATH=/app/data/construction.db
       - NUXT_PUBLIC_API_BASE=/api
+      - NUXT_PUBLIC_GOOGLE_CLIENT_ID=${NUXT_PUBLIC_GOOGLE_CLIENT_ID}
     volumes:
       # Mount SQLite database directory
       - sqlite_data:/app/data

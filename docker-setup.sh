@@ -30,6 +30,7 @@ NUXT_DB_PATH=/app/data/construction.db
 
 # Application Configuration
 NUXT_PUBLIC_API_BASE=/api
+NUXT_PUBLIC_GOOGLE_CLIENT_ID=
 NUXT_HOST=0.0.0.0
 NUXT_PORT=3000
 

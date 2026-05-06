@@ -100,6 +100,13 @@
             <span v-if="isLoading">Creating account...</span>
             <span v-else>Create Account</span>
           </button>
+
+          <p v-if="googleError" class="google-error">{{ googleError }}</p>
+
+          <div class="google-signin">
+            <div ref="googleButtonRef" class="google-button-slot"></div>
+            <p v-if="googleLoading" class="google-loading">Signing in with Google...</p>
+          </div>
           
           <div class="divider">
             <span>Already have an account?</span>
@@ -115,6 +122,8 @@
 </template>
 
 <script setup lang="ts">
+import { useGoogleOneTap } from '../composables/useGoogleOneTap'
+
 // Reactive form data
 const form = reactive({
   firstName: '',
@@ -127,6 +136,14 @@ const form = reactive({
 })
 
 const isLoading = ref(false)
+const googleLoading = ref(false)
+const googleError = ref('')
+const googleButtonRef = ref<HTMLElement | null>(null)
+
+const runtimeConfig = useRuntimeConfig()
+const { initGoogleOneTap } = useGoogleOneTap()
+
+let teardownGoogleOneTap: (() => void) | null = null
 
 // Form validation
 const isFormValid = computed(() => {
@@ -167,6 +184,50 @@ const handleRegister = async () => {
     isLoading.value = false
   }
 }
+
+const handleGoogleCredential = async (credential: string) => {
+  googleLoading.value = true
+  googleError.value = ''
+
+  try {
+    await $fetch('/api/auth/google', {
+      method: 'POST',
+      body: {
+        credential
+      }
+    })
+
+    await navigateTo('/')
+  } catch (error) {
+    console.error('Google registration error:', error)
+    googleError.value = 'Google sign-in failed. Please try again.'
+  } finally {
+    googleLoading.value = false
+  }
+}
+
+onMounted(async () => {
+  if (!runtimeConfig.public.googleClientId) {
+    return
+  }
+
+  try {
+    teardownGoogleOneTap = await initGoogleOneTap({
+      clientId: runtimeConfig.public.googleClientId,
+      buttonElement: googleButtonRef.value,
+      onCredential: handleGoogleCredential,
+      onError: (error) => {
+        console.error('Google One Tap init error:', error)
+      }
+    })
+  } catch (error) {
+    console.error('Google One Tap unavailable:', error)
+  }
+})
+
+onBeforeUnmount(() => {
+  teardownGoogleOneTap?.()
+})
 </script>
 
 <style scoped>
@@ -301,6 +362,30 @@ const handleRegister = async () => {
 .submit-btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+.google-signin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.google-button-slot {
+  min-height: 44px;
+}
+
+.google-loading {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.google-error {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #dc2626;
+  text-align: center;
 }
 
 .divider {

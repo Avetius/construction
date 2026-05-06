@@ -7,7 +7,7 @@
           Building excellence through innovation, expertise, and dedication to quality construction management.
         </p>
       </div>
-      
+
       <div class="about-content">
         <div class="about-text">
           <div class="about-intro">
@@ -18,7 +18,7 @@
               craftsmanship with modern technology to deliver exceptional results.
             </p>
           </div>
-          
+
           <div class="about-mission">
             <h3>Our Mission</h3>
             <p>
@@ -27,7 +27,7 @@
               the highest quality standards.
             </p>
           </div>
-          
+
           <div class="about-values">
             <h3>Our Values</h3>
             <ul class="values-list">

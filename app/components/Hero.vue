@@ -1,5 +1,16 @@
 <template>
   <section id="hero" class="hero-section">
+    <div class="hero-background" aria-hidden="true">
+      <div
+        v-for="(image, index) in wallpapers"
+        :key="image"
+        class="hero-slide"
+        :class="{ 'is-active': index === currentSlide }"
+        :style="{ backgroundImage: `url('${image}')` }"
+      />
+      <div class="hero-overlay" />
+    </div>
+
     <div class="container">
       <div class="hero-content">
         <div class="hero-text">
@@ -34,13 +45,13 @@
         </div>
         <div class="hero-image">
           <div class="image-placeholder">
-            <svg xmlns="http://www.w3.org/2000/svg" class="construction-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M3 21h18"/>
-              <path d="M5 21V7l8-4v18"/>
-              <path d="M19 21V11l-6-4"/>
-              <path d="M9 9v12"/>
-              <path d="M9 9h6v12"/>
-            </svg>
+            <NuxtImg
+              src="/Crest.png"
+              alt="Construction brand crest logo"
+              class="construction-logo"
+              width="245"
+              height="245"
+            />
           </div>
         </div>
       </div>
@@ -49,17 +60,71 @@
 </template>
 
 <script setup lang="ts">
-// You can add hero-specific logic here
+const wallpapers = [
+  'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=80',
+  'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1920&q=80',
+  'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80',
+  'https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1920&q=80'
+]
+
+const currentSlide = ref(0)
+let slideTimer: ReturnType<typeof setInterval> | null = null
+
+onMounted(() => {
+  slideTimer = setInterval(() => {
+    currentSlide.value = (currentSlide.value + 1) % wallpapers.length
+  }, 5000)
+})
+
+onBeforeUnmount(() => {
+  if (slideTimer) {
+    clearInterval(slideTimer)
+  }
+})
 </script>
 
 <style scoped>
 .hero-section {
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   padding-top: 5rem; /* Account for fixed header */
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 1s ease, transform 6s ease;
+}
+
+.hero-slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, rgba(8, 12, 22, 0.78) 0%, rgba(13, 20, 35, 0.65) 45%, rgba(15, 23, 42, 0.75) 100%);
+}
+
+.container {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content {
@@ -143,7 +208,7 @@
 
 .btn-secondary:hover {
   background-color: white;
-  color: #667eea;
+  color: #111827;
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
 }
@@ -190,10 +255,11 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.construction-icon {
-  width: 200px;
-  height: 200px;
-  color: rgba(255, 255, 255, 0.6);
+.construction-logo {
+  width: 245px;
+  height: 245px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 26px rgba(0, 0, 0, 0.45));
 }
 
 /* Responsive Design */
@@ -213,9 +279,9 @@
     height: 300px;
   }
   
-  .construction-icon {
-    width: 150px;
-    height: 150px;
+  .construction-logo {
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -257,9 +323,9 @@
     height: 250px;
   }
   
-  .construction-icon {
-    width: 120px;
-    height: 120px;
+  .construction-logo {
+    width: 170px;
+    height: 170px;
   }
 }
 
@@ -278,6 +344,12 @@
   
   .hero-stats {
     gap: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide {
+    transition: none;
   }
 }
 </style>

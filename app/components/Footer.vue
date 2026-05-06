@@ -113,6 +113,7 @@
             <a href="/privacy">Privacy Policy</a>
             <a href="/terms">Terms of Service</a>
             <a href="/cookies">Cookie Policy</a>
+            <a href="#" @click.prevent="openPreferences">Your Privacy Choices (CCPA)</a>
           </div>
         </div>
       </div>
@@ -121,6 +122,8 @@
 </template>
 
 <script setup lang="ts">
+const { openPreferences } = useCookieConsent()
+
 const newsletterEmail = ref('')
 const isNewsletterSubmitting = ref(false)
 
